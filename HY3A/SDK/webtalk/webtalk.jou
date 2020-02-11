@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Thu Jan 16 15:12:42 2020
+# Process ID: 9382
+# Current directory: /media/D/dong/HY3/3A/HY_3A/HY_3A.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /media/D/dong/HY3/3A/HY_3A/HY_3A.sdk/webtalk/webtalk.log
+# Journal file: /media/D/dong/HY3/3A/HY_3A/HY_3A.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

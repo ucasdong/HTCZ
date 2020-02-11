@@ -1,0 +1,1046 @@
+/*
+  * user_config.c
+ *
+ *  Created on: 2018年10月25日
+ *      Author: 508
+ */
+
+#include "user_interface.h"
+
+static void uartsendmsg(uint8_t cmdNo, uint8_t* databuf, uint32_t len)
+{
+	S_UART_CMD resp;
+	uint32_t m32loop = 0;
+	uint32_t  m8subloop = 0;
+
+	for(m32loop = 0; m32loop < (len / 12); m32loop++)
+	{
+		memset(&resp, 0 , sizeof(S_UART_CMD)); //initial response
+
+		resp.cmd = cmdNo;
+		resp.canNo = 0;
+		resp.validLen = 12 + 1;
+
+		resp.index = m32loop;
+
+		for(m8subloop = 0; m8subloop < 12; m8subloop++)
+		{
+			resp.databuf[m8subloop] = databuf[m32loop * 12 + m8subloop];
+		}
+
+		ioDevWrite(DEV_NUM_UART_A, (uint8_t*)&resp, sizeof(S_UART_CMD));
+		for(m8subloop = 0; m8subloop < 0x8000; m8subloop++);
+	}
+
+	if(m32loop * 12 != len)
+	{
+		memset(&resp, 0 , sizeof(S_UART_CMD)); //initial response
+
+		resp.cmd = cmdNo;
+		resp.canNo = 0;
+		resp.validLen = (len - m32loop * 12 + 1);
+		resp.index = m32loop;
+
+		for(m8subloop = 0; m8subloop < (len - m32loop * 12); m8subloop++)
+		{
+			resp.databuf[m8subloop] = databuf[m32loop * 12 + m8subloop];
+		}
+
+		ioDevWrite(DEV_NUM_UART_A, (uint8_t*)&resp, sizeof(S_UART_CMD));
+	}
+}
+
+
+#ifdef PROJECT_HY3A
+
+static void uartReply2user(uint8_t cmdNo, uint8_t totalPack, uint8_t teleClass,uint8_t* databuf, uint32_t len)
+{
+	UART_CMD resp;
+	uint32_t m32loop = 0;
+	uint32_t  m8subloop = 0;
+
+	for(m32loop = 0; m32loop < (len / 10); m32loop++)
+	{
+		memset(&resp, 0 , sizeof(S_UART_CMD)); //initial response
+
+		resp.cmd = cmdNo;
+		resp.totalPackage = totalPack;
+		resp.type = teleClass;
+		resp.validLen = 0x0a;
+
+		//resp.index = m32loop;
+
+		for(m8subloop = 0; m8subloop < 10; m8subloop++)
+		{
+			resp.databuf[m8subloop] = databuf[m32loop * 10 + m8subloop];
+		}
+
+		ioDevWrite(DEV_NUM_UART_A, (uint8_t*)&resp, sizeof(S_UART_CMD));
+		for(m8subloop = 0; m8subloop < 0x8000; m8subloop++);
+	}
+
+	if(m32loop * 10 != len)
+	{
+		memset(&resp, 0 , sizeof(S_UART_CMD)); //initial response
+
+		resp.cmd = cmdNo;
+		resp.totalPackage = 0;
+		resp.type = teleClass;
+		resp.validLen = (len - m32loop * 10 + 1);
+		//resp.index = m32loop;
+
+		for(m8subloop = 0; m8subloop < (len - m32loop * 10); m8subloop++)
+		{
+			resp.databuf[m8subloop] = databuf[m32loop * 10 + m8subloop];
+		}
+
+		ioDevWrite(DEV_NUM_UART_A, (uint8_t*)&resp, sizeof(S_UART_CMD));
+	}
+}
+#endif
+
+static void copybroadcastdata(uint8_t type, uint8_t index, uint8_t* data, uint8_t len)
+{
+	uint8_t tmp;
+
+	switch(type)
+	{
+	case 0:
+		tmp = 0x0f;
+		break;
+	case 1:
+		tmp = 0x7f;
+		break;
+	case 2:
+		tmp = 0x2f;
+		break;
+	case 3:
+		tmp = 0x0f;
+		break;
+	default:
+		return;
+	}
+
+	memcpy(&g8broadcastbuf[type + 1][BUFFER_ID_TEMP][index * 4], data, len);
+
+	if(index == tmp)
+	{
+		memcpy(g8broadcastbuf[type + 1][BUFFER_ID_TRANSFER], g8broadcastbuf[type + 1][BUFFER_ID_TEMP], MAX_BUFFER_SIZE);
+	}
+}
+
+static void saveToLocaltelemetry(uint8_t cmd,uint8_t* src,uint16_t len)
+{
+	uint8_t index = 0;
+	switch(cmd)
+	{
+	case UART_CMD_TELEMETRY_CLASS1:
+		index = 0;
+		break;
+	case UART_CMD_TELEMETRY_CLASS2:
+			index = 1;
+			break;
+	case UART_CMD_TELEMETRY_CLASS3:
+			index = 2;
+			break;
+	case UART_CMD_TELEMETRY_CLASS4:
+			index = 3;
+			break;
+	case UART_CMD_TELEMETRY_CLASS5:
+			index = 4;
+			break;
+	case UART_CMD_TELEMETRY_CLASS6:
+			index = 5;	break;
+	case UART_CMD_TELEMETRY_CLASS7:
+			index = 6;	break;
+	case UART_CMD_TELEMETRY_CLASS8:
+			index = 7;	break;
+	default:
+		return;
+	}
+	memcpy(&local_telemetry_class1[index],src,len);
+}
+
+//static void collectTelemryFram(index,src)
+//{
+//	memcpy(&telemetryReply[index],src,len);
+//}
+uint16_t offset =0;
+uint8_t packetCount = 0;
+static void saveToLocalBroadCast(uint8_t cmd,uint8_t* src)
+{
+	uint8_t index = 0;
+	uint16_t len = src[3];
+	uint8_t totolPacketCount = src[1];
+	switch(cmd)
+	{
+		case UART_CMD_BROADCAST_CLASS1:
+			index = 0;
+			packetCount++;
+			//g8broadcastmask |= BROADCAST_MASK_0; //TODO:掩码放在下面处理
+			break;
+		case UART_CMD_BROADCAST_CLASS2:
+			index = 1;
+			packetCount++;
+		//	g8broadcastmask |= BROADCAST_MASK_1;
+			break;
+		case UART_CMD_BROADCAST_CLASS3:
+			index = 2;
+			packetCount++;
+		//	g8broadcastmask |= BROADCAST_MASK_2;
+			break;
+		case UART_CMD_BROADCAST_CLASS4:
+			index = 3;
+			packetCount++;
+		//	g8broadcastmask |= BROADCAST_MASK_3;
+			break;
+		case UART_CMD_BROADCAST_CLASS5:
+			index = 4;
+			packetCount++;
+		//	g8broadcastmask |= BROADCAST_MASK_4;
+			break;
+		case UART_CMD_BROADCAST_CLASS6:
+			index = 5;
+			packetCount++;
+		//	g8broadcastmask |= BROADCAST_MASK_5;
+			break;
+		case UART_CMD_BROADCAST_CLASS7:
+			index = 6;
+			packetCount++;
+		//	g8broadcastmask |= BROADCAST_MASK_6;
+			break;
+		case UART_CMD_BROADCAST_CLASS8:
+			index = 7;
+			packetCount++;
+		//	g8broadcastmask |= BROADCAST_MASK_7;
+			break;
+		default:
+			return;
+		}
+	memcpy(local_BroadCast_class1[index]+offset,src+4,len);
+
+	if(packetCount == totolPacketCount)
+	{
+		g8broadcastmask |= (cmd == UART_CMD_BROADCAST_CLASS1)? BROADCAST_MASK_0: \
+				(cmd == UART_CMD_BROADCAST_CLASS2)?BROADCAST_MASK_1:	\
+				(cmd == UART_CMD_BROADCAST_CLASS3)?BROADCAST_MASK_2:	\
+				(cmd == UART_CMD_BROADCAST_CLASS4)?BROADCAST_MASK_3:	\
+				(cmd == UART_CMD_BROADCAST_CLASS5)?BROADCAST_MASK_4:	\
+				(cmd == UART_CMD_BROADCAST_CLASS6)?BROADCAST_MASK_5:	\
+				(cmd == UART_CMD_BROADCAST_CLASS7)?BROADCAST_MASK_6:	\
+				(cmd == UART_CMD_BROADCAST_CLASS8)?BROADCAST_MASK_7:g8broadcastmask;
+		offset =0;
+		packetCount = 0;
+	}
+	else
+		offset+=len;
+}
+static void dataSrcSelect(uint8_t mode)
+{
+	uint8_t databuf[4] = {0};
+	S_DEV_IIC_ARG i2cArg;
+
+	switch(mode)
+	{
+	case 0:
+		databuf[0] = IIC_CTRL_MASTER_SELECT;
+		break;
+	case 1:
+		databuf[0] = IIC_CTRL_SLAVE_SELECT;
+		break;
+	default:
+		return;
+	}
+
+//	*(volatile uint32_t*)(0x50000) = 0x5555;
+//
+//	*(volatile uint32_t*)(0x240000) = 0x01; // tx reset
+//	*(volatile uint32_t*)(0x240004) = 0x01; // rx reset
+
+	*(volatile uint32_t*)(0x80000)   = 0;
+	for(int loop = 0; loop < 0x1000; loop++);
+	*(volatile uint32_t*)(0x80000)   = 0x80000000;
+
+	delay_us(100000);
+
+//	//aurora config
+//	*(volatile uint32_t*)(0x240010) = 0x00; // disable all channel
+
+	//ioDevCtrl config b203
+	i2cArg.iicNo = DEV_IIC_B203A;
+	i2cArg.src = databuf;
+	ioDevCtrl(DEV_NUM_IIC, (uint8_t*)&i2cArg);
+	i2cArg.iicNo = DEV_IIC_B203B;
+	i2cArg.src = databuf;
+	ioDevCtrl(DEV_NUM_IIC, (uint8_t*)&i2cArg);
+	//ioDevCtrl config b203
+	i2cArg.iicNo = DEV_IIC_B203C;
+	i2cArg.src = databuf;
+	ioDevCtrl(DEV_NUM_IIC, (uint8_t*)&i2cArg);
+	i2cArg.iicNo = DEV_IIC_B203D;
+	i2cArg.src = databuf;
+	ioDevCtrl(DEV_NUM_IIC, (uint8_t*)&i2cArg);
+	//reset data path
+
+	*(volatile uint32_t*)(0x80000)   = 0;
+	for(int loop = 0; loop < 0x1000; loop++);
+	*(volatile uint32_t*)(0x80000)   = 0x80000000;
+
+//
+//	*(volatile uint32_t*)(0x240000) = 0x00; //release tx reset
+//	*(volatile uint32_t*)(0x240004) = 0x00; //release rx reset
+//	//delay
+//	for(int loop = 0; loop < 0x100000; loop++);
+//	*(volatile uint32_t*)(0x240010) = 0x0f; //enable chan0 - 3
+//
+//	//aurora loop back
+//	*(volatile uint32_t*)(0x24000c) = 0;
+//
+//	*(volatile uint32_t*)(0x50000) = 0xaaaa;
+}
+
+/*
+ * Function : cmdParse
+ * 		parse response
+ * Param    :
+ * 		bufNo : assign the data buffer index
+  *
+ * Return   :
+ * 		None
+ *
+ * */
+
+void save2Reply(uint8_t index,uint8_t* src,uint16_t len)
+{
+
+	memcpy(telemetryReply[index]+goffset[index],src,len);
+	goffset[index] +=len;
+	//memcpy(local_BroadCast_class1[index]+offset,src+4,len);
+	if((index == 0 && src[2] == 0x5) ||//telemetry class1 ready to reply to user
+	   (index == 1 && src[2] == 0x2) ||//telemetry class2 ready to reply to user
+	   (index == 2 && src[2] == 0x5) ||//telemetry class3 ready to reply to user
+	   (index == 3 && src[2] == 0xa) ||//telemetry class4 ready to reply to user
+	   (index == 4 && src[2] == 0x4)) //telemetry class5 ready to reply to user
+	{
+		uint8_t totalPacketLen = src[2]+1;
+		uint8_t telemetryClass = index;
+		uartReply2user(UART_CMD_TELEMETRY_REPLY,totalPacketLen,telemetryClass,
+				telemetryReply[index], goffset[index]);
+		goffset[index] = 0;
+	}
+
+}
+void cmdParse(uint8_t bufNo)
+{
+	uint8_t m8datalen  = 0;
+	uint8_t m8databuf[0x10] = {0};
+
+	//get data len
+	m8datalen = revDatafromBuf(bufNo, &m8databuf[0], 10); // get RTR, DLC
+
+	//analysis protocol response
+	uint8_t index = 0;
+	switch(m8databuf[0])
+	{
+	case 0x66   : //  遥控应答
+	case 0x51	:
+	case 0x52	:
+		uartsendmsg(UART_CMD_TELECONTROL_REPLY, m8databuf, m8datalen);
+		break;
+	case 0xa6: //外部CAN自身遥测，一类慢遥测，二类慢 遥测
+
+		if(m8databuf[2] == 0x0 && m8databuf[4] == 0x34)
+		{
+			index = 2;
+			//save(index);
+		}
+		else if(m8databuf[2] ==  0x0 && m8databuf[4] == 0x54)
+		{
+
+			index = 3;
+
+			//uartsendmsg(UART_CMD_TELEMETRY_REPLY,m8databuf, UART_CMD_LENGTH);
+		}
+		else if(m8databuf[2] == 0x0 && m8databuf[4] == 0x74)
+		{
+			index = 4;
+			//save();
+		}
+
+
+		save2Reply(index,m8databuf,m8datalen);
+
+
+		break;
+	case 0x91:
+		if(m8databuf[2] == 0x0 && m8databuf[4] == 0x31) //this telemetry reply total has 6  frame packet
+		{
+			index = 0;
+			save2Reply(index,m8databuf,m8datalen);
+			//uartsendmsg(UART_CMD_TELEMETRY_REPLY);
+		}
+		else
+			save2Reply(index,m8databuf,m8datalen);
+		break;
+	case 0x92:
+		if(m8databuf[2] == 0x0 && m8databuf[4] == 0x32) //this telemetry reply packet has  totally 3  frame
+		{
+			index = 1;
+			//save(index);
+			//uartsendmsg(UART_CMD_TELEMETRY_REPLY);
+
+		}
+		else
+			save2Reply(index,m8databuf,m8datalen);
+	defalue:;
+		break;
+
+	}
+}
+
+
+int device_reset(bool changeSource, int sourceType)
+{
+
+	Xil_Out32(0xb0000,0xfc00); //(1)复位入口数据： mwr 0xb0000 0xfc00  ----
+	if(changeSource)
+		Xil_Out32(0x80044,sourceType); //（2）数据源切换-----
+	delay_us(50000);			//(3)延时----50ms  保证发送上位机帧结构完整
+	Xil_Out32(0x80004,1); //(4) mwr 0x8_0004 1		ddr datamover的复位 高复位
+	Xil_Out32(0x80004,0); //(5)mwr 0x8_0004 0		ddr datamover的复位 清复位
+	Xil_Out32(0x80010,0x1); //(6)mwr 0x80010   0x1    计算器清楚
+	Xil_Out32(0x80010,0x0); //(7)mwr 0x80010   0x0    计算器清楚
+	Xil_Out32(0xb0000,0xfcff); //(8)放开入口数据： mwr 0xb0000 0xfcff
+	return 0;
+}
+
+/*
+ * Function : uartCmdParse
+ * 		parse CAN Command
+ * Param    :
+ * 		cmdNo : UART command index(from APP)
+ *
+ * Return   :
+ * 		None
+ *
+ * */
+/*
+ * databuf[0] : command index
+ * databuf[1] : for can number select
+ * databuf[2] : valid data length
+ * databuf[15 : 3] : valid data
+ * */
+void uartCmdParse(uint8_t* databuf)
+{
+	switch(databuf[0])
+	{
+	case UART_CMD_TELEMETRY_CLASS1:
+	case UART_CMD_TELEMETRY_CLASS2:
+	case UART_CMD_TELEMETRY_CLASS3:
+	case UART_CMD_TELEMETRY_CLASS4:
+	case UART_CMD_TELEMETRY_CLASS5:
+	case UART_CMD_TELEMETRY_CLASS6:
+	case UART_CMD_TELEMETRY_CLASS7:
+	case UART_CMD_TELEMETRY_CLASS8:
+		saveToLocaltelemetry(databuf[0],databuf,UART_CMD_LENGTH);
+		break;
+	case UART_CMD_BROADCAST_CLASS1:
+	case UART_CMD_BROADCAST_CLASS2:
+	case UART_CMD_BROADCAST_CLASS3:
+	case UART_CMD_BROADCAST_CLASS4:
+	case UART_CMD_BROADCAST_CLASS5:
+	case UART_CMD_BROADCAST_CLASS6:
+	case UART_CMD_BROADCAST_CLASS7:
+	case UART_CMD_BROADCAST_CLASS8 :
+		saveToLocalBroadCast(databuf[0],databuf);
+		break;
+		//memcpy(&local_BroadCast_class1,databuf+4,databuf[3]);
+	case UART_CMD_TELECONTROL:
+		break;
+	case UART_CMD_CANBUS_EXCHANGE:
+		g8ActiveCANNum = databuf[4];
+	case 	 UART_CMD_RESET_BUF : // reset buffer attr status
+		bufattr_init();
+		global_var_init();
+		break;
+	case UART_CMD_TELEMETRY_ENABLE:
+		if((databuf[5] & 0x0f ) == 0x0)
+			g8stopTelemetry = 0;
+		else
+			g8stopTelemetry =  1;
+		break;
+
+	case UART_CMD_BROADCAST_ENABLE:
+		if((databuf[4] & 0x0f ) == 0x0)
+			g8broadcastmask &= ~BROADCAST_MASK_0;
+		else
+			g8broadcastmask |= BROADCAST_MASK_0;
+		if((databuf[5] & 0x0f ) == 0x0)
+			g8broadcastmask &= ~BROADCAST_MASK_1;
+		else
+			g8broadcastmask |= BROADCAST_MASK_1;
+		if((databuf[6] & 0x0f ) == 0x0)
+			g8broadcastmask &= ~BROADCAST_MASK_2;
+		else
+			g8broadcastmask |= BROADCAST_MASK_2;
+		if((databuf[7] & 0x0f ) == 0x0)
+			g8broadcastmask &= ~BROADCAST_MASK_3;
+		else
+			g8broadcastmask |= BROADCAST_MASK_3;
+		if((databuf[8] & 0x0f ) == 0x0)
+			g8broadcastmask &= ~BROADCAST_MASK_4;
+		else
+			g8broadcastmask |= BROADCAST_MASK_4;
+		if((databuf[9] & 0x0f ) == 0x0)
+			g8broadcastmask &= ~BROADCAST_MASK_5;
+		else
+			g8broadcastmask |= BROADCAST_MASK_5;
+			break;
+	case UART_CMD_RESET_DEVICE:
+		device_reset(FALSE,0);
+		break;
+	case UART_CMD_DATASOURCE_CHANGE:
+		device_reset(TRUE,databuf[4]);
+		break;
+
+	default:
+		break;
+	}
+	if(databuf[1] == 0)
+		ioDevWrite(DEV_NUM_CAN_A,databuf+4,databuf[3]);
+	else if(databuf[1] == 1)
+		ioDevWrite(DEV_NUM_CAN_B,databuf+4,databuf[3]);
+	else
+		ioDevWrite(DEV_NUM_CAN_B,databuf+4,databuf[3]);
+
+//	ioDevWrite(DEV_NUM_UART_A, databuf, UART_CMD_LENGTH);
+//
+//	switch(databuf[0])
+//	{
+//		case 	 UART_CMD_RESET_BUF : // reset buffer attr status
+//			bufattr_init();
+//			global_var_init();
+//			break;
+//		case     UART_CTRL_CMD_ID10 :
+//			g32SecondCntTmp = databuf[4];
+//			g32SecondCntTmp = g32SecondCntTmp << 8 | databuf[5];
+//			g32SecondCntTmp = g32SecondCntTmp << 8 | databuf[6];
+//			g32SecondCntTmp = g32SecondCntTmp << 8 | databuf[7];
+//			gUpdateTimeFlag = 1;
+//			break;
+//		case     UART_CTRL_CMD_ID11 :
+//			copybroadcastdata(0, databuf[3], &databuf[4], 4);
+//			break;
+//		case     UART_CTRL_CMD_ID12 :
+//			copybroadcastdata(1, databuf[3], &databuf[4], 4);
+//			break;
+//		case     UART_CTRL_CMD_ID13 :
+//			copybroadcastdata(2, databuf[3], &databuf[4], 4);
+//			break;
+//		case     UART_CTRL_CMD_ID14 :
+//			copybroadcastdata(3, databuf[3], &databuf[4], 4);
+//			break;
+//		case     UART_CTRL_CMD_ID15 :
+//			break;
+//		case     UART_CTRL_CMD_ID16 :
+//			break;
+//		case     UART_CTRL_CMD_ID17 :
+//			break;
+//		case     UART_CTRL_CMD_ID18 :
+//			break;
+//		case     UART_CTRL_CMD_ID19 :
+//			break;
+//		case     UART_CTRL_CMD_ID1A :
+//			break;
+//		case     UART_CTRL_CMD_ID1B :
+//			break;
+//		case     UART_CTRL_CMD_ID1C :
+//			break;
+//		case     UART_CTRL_CMD_ID1D :
+//			break;
+//		case     UART_CTRL_CMD_ID1E :
+//			break;
+//		case     UART_CTRL_CMD_ID1F :
+//			break;
+//		case     UART_CTRL_CMD_ID20 :   //send TELEMETRY data
+//			uartsendmsg(UART_CTRL_CMD_ID40, g8telemetrydata[TELEMETRY_ID_0][BUFFER_ID_TRANSFER], 24);
+//			break;
+//		case     UART_CTRL_CMD_ID21 :
+//			break;
+//		case     UART_CTRL_CMD_ID22 :
+//			break;
+//		case     UART_CTRL_CMD_ID23 :
+//			break;
+//		case     UART_CTRL_CMD_ID24 :
+//			break;
+//		case     UART_CTRL_CMD_ID25 :
+//			break;
+//		case     UART_CTRL_CMD_ID26 :
+//			break;
+//		case     UART_CTRL_CMD_ID27 :
+//			break;
+//		case     UART_CTRL_CMD_ID28 :
+//			break;
+//		case     UART_CTRL_CMD_ID29 :
+//			break;
+//		case     UART_CTRL_CMD_ID2A :
+//			break;
+//		case     UART_CTRL_CMD_ID2B :
+//			break;
+//		case     UART_CTRL_CMD_ID2C :
+//			break;
+//		case     UART_CTRL_CMD_ID2D :
+//			break;
+//		case     UART_CTRL_CMD_ID2E :
+//			break;
+//		case     UART_CTRL_CMD_ID2F :
+//			break;
+//		case     UART_CTRL_CMD_ID30 :
+//			if(databuf[3])
+//			{
+//				g8broadcastmask |= BROADCAST_MASK_0;
+//			}
+//			else
+//			{
+//				g8broadcastmask &= ~BROADCAST_MASK_0;
+//			}
+//			if(databuf[4])
+//			{
+//				g8broadcastmask |= BROADCAST_MASK_1;
+//			}
+//			else
+//			{
+//				g8broadcastmask &= ~BROADCAST_MASK_1;
+//			}
+//			if(databuf[5])
+//			{
+//				g8broadcastmask |= BROADCAST_MASK_2;
+//			}
+//			else
+//			{
+//				g8broadcastmask &= ~BROADCAST_MASK_2;
+//			}
+//			if(databuf[6])
+//			{
+//				g8broadcastmask |= BROADCAST_MASK_3;
+//			}
+//			else
+//			{
+//				g8broadcastmask &= ~BROADCAST_MASK_3;
+//			}
+//			if(databuf[7])
+//			{
+//				g8broadcastmask |= BROADCAST_MASK_4;
+//			}
+//			else
+//			{
+//				g8broadcastmask &= ~BROADCAST_MASK_4;
+//			}
+//			break;
+//		case     UART_CTRL_CMD_ID31 :
+//			if(databuf[3])
+//			{
+//				databuf[0] = FSYN_CMD_START;
+//				ioDevCtrl(DEV_NUM_FSYNC, databuf);
+//				ioDevCtrl(DEV_NUM_FSYNC_TIMER, databuf);
+//			}
+//			else
+//			{
+//				databuf[0] = FSYN_CMD_STOP;
+//				ioDevCtrl(DEV_NUM_FSYNC, databuf);
+//				ioDevCtrl(DEV_NUM_FSYNC_TIMER, databuf);
+//			}
+//			if(databuf[4])
+//			{
+//				g8telemetrymask |= TELEMETRY_MASK_0;
+//			}
+//			else
+//			{
+//				g8telemetrymask &= ~TELEMETRY_MASK_0;
+//			}
+//			break;
+//		case     UART_CTRL_CMD_ID32 :
+//
+//			dataSrcSelect(databuf[3]);
+//
+//			break;
+//		case     UART_CTRL_CMD_ID33 :
+//			break;
+//		case     UART_CTRL_CMD_ID34 :
+//			break;
+//		case     UART_CTRL_CMD_ID35 :
+//			break;
+//		case     UART_CTRL_CMD_ID36 :
+//			break;
+//		case     UART_CTRL_CMD_ID37 :
+//			break;
+//		case     UART_CTRL_CMD_ID38 :
+//			break;
+//		case     UART_CTRL_CMD_ID39 :
+//			break;
+//		case     UART_CTRL_CMD_ID3A :
+//			break;
+//		case     UART_CTRL_CMD_ID3B :
+//			break;
+//		case     UART_CTRL_CMD_ID3C :
+//			break;
+//		case     UART_CTRL_CMD_ID3D :
+//			break;
+//		case     UART_CTRL_CMD_ID3E :
+//			break;
+//		case     UART_CTRL_CMD_ID3F :
+//			break;
+//		default:
+//			break;
+//	}
+//
+//	return ;
+}
+
+static uint8_t getsum(uint8_t* databuf, uint32_t len)
+{
+	uint8_t sum = 0;
+	for(uint32_t m32loop = 0; m32loop < len; m32loop++)
+	{
+		sum += databuf[m32loop];
+	}
+
+	return sum;
+}
+
+
+void global_var_init(void)
+{
+#ifdef PROJECT_HY3A
+	for(int i = 0;i<8;i++)
+	{
+		memcpy(local_telemetry_class1[i],0,17);
+		memcpy(local_BroadCast_class1[i],0,MAX_BUFFER_SIZE);
+
+	}
+#endif
+	for(uint8_t loop = 0; loop < MAX_BROADCAST_COUNT; loop++)
+	{
+		memset(g8broadcastbuf[loop][0], 0 , MAX_BUFFER_SIZE);
+		memset(g8broadcastbuf[loop][1], 0 , MAX_BUFFER_SIZE);
+		g32broadcastlen[loop] = 0;
+	}
+
+	for(uint8_t loop = 0; loop < MAX_TELEMETRY_COUNT; loop++)
+	{
+		memset(g8telemetrydata[loop][0], 0 , MAX_BUFFER_SIZE);
+		memset(g8telemetrydata[loop][1], 0 , MAX_BUFFER_SIZE);
+		g32telemetrylen[loop] = 0;
+	}
+
+#ifdef PROTOCOL_TYPE_CAN
+			gProtocolDevNum    = DEV_NUM_CAN_A;
+			gProtocolDevNumBak = DEV_NUM_CAN_B;
+
+			gProtocolBufNum    = BUF_NUM_CAN_A;
+			gProtocolBufNumBak = BUF_NUM_CAN_B;
+			g8stopTelemetry = 0;
+
+#endif
+
+#ifdef PROTOCOL_TYPE_SPI
+			gProtocolDevNum    = DEV_NUM_SPI_SEND;
+			gProtocolDevNumBak = DEV_NUM_SPI_SEND;
+
+			gProtocolBufNum    = BUF_NUM_SPI;
+			gProtocolBufNumBak = BUF_NUM_SPI;
+#endif
+
+#ifdef PROTOCOL_TYPE_SPI_NBYTE
+			gProtocolDevNum    = DEV_NUM_SPI_NBYTE_SEND;
+			gProtocolDevNumBak = DEV_NUM_SPI_NBYTE_SEND;
+
+			gProtocolBufNum    = BUF_NUM_SPI_NBYTE;
+			gProtocolBufNumBak = BUF_NUM_SPI_NBYTE;
+#endif
+}
+
+static void send_broadcast(uint32_t ms)
+{
+	if(ms%500 == 0 )	//计时500毫秒的广播发送
+	{
+		//if(local_BroadCast_class1[5][0] == UART_CMD_BROADCAST_CLASS6)
+		if((g8broadcastmask & BROADCAST_MASK_5) == BROADCAST_MASK_5)
+			ioDevWrite(DEV_NUM_CAN_A, &local_BroadCast_class1[5], 30);
+	}
+	int ret = 0;
+	if(ms%1000 == 0) //计时一秒的广播发送
+	{
+		if((g8broadcastmask & BROADCAST_MASK_0) == BROADCAST_MASK_0)
+		{
+			static char a_b = 1;
+			if(a_b)
+			{
+				ioDevWrite(DEV_NUM_CAN_A, &local_BroadCast_class1[0], 10);
+				a_b = 0;
+			}
+			else
+			{	ioDevWrite(DEV_NUM_CAN_B, &local_BroadCast_class1[0], 10);
+				a_b = 1;
+			}
+		}
+		if((g8broadcastmask & BROADCAST_MASK_1) == BROADCAST_MASK_1)
+			ioDevWrite(g8ActiveCANNum, &local_BroadCast_class1[1], 9);
+		if((g8broadcastmask & BROADCAST_MASK_2) == BROADCAST_MASK_2)
+			ret = ioDevWrite(g8ActiveCANNum, &local_BroadCast_class1[2], 65);
+		if((g8broadcastmask & BROADCAST_MASK_3) == BROADCAST_MASK_3)
+			ioDevWrite(g8ActiveCANNum, &local_BroadCast_class1[3], 326);
+		if((g8broadcastmask & BROADCAST_MASK_4) == BROADCAST_MASK_4)
+			ioDevWrite(g8ActiveCANNum, &local_BroadCast_class1[4], 359);
+
+
+	}
+//	if((g8broadcastmask & BROADCAST_MASK_0) == BROADCAST_MASK_0)
+//	{
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][0] = 0xa1;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][1] = (g32SecondCnt >> 24) & 0xff;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][2] = (g32SecondCnt >> 16) & 0xff;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][3] = getsum(&g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][0], 3);
+//
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][4] = 0xa2;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][5] = (g32SecondCnt >>  8) & 0xff;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][6] = (g32SecondCnt      ) & 0xff;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][7] = getsum(&g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][4], 3);
+//
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][8] = 0xa3;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][9] = 0;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][10] = 0;
+//		g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][11] = getsum(&g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER][8], 3);
+//
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_0][BUFFER_ID_TRANSFER], 12);
+//
+//	}
+//	if((g8broadcastmask & BROADCAST_MASK_1) == BROADCAST_MASK_1)
+//	{
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_1][BUFFER_ID_TRANSFER], g32broadcastlen[BROADCAST_ID_1]);
+//	}
+//	if((g8broadcastmask & BROADCAST_MASK_2) == BROADCAST_MASK_2)
+//	{
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_2][BUFFER_ID_TRANSFER], g32broadcastlen[BROADCAST_ID_2]);
+//	}
+//	if((g8broadcastmask & BROADCAST_MASK_3) == BROADCAST_MASK_3)
+//	{
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_3][BUFFER_ID_TRANSFER], g32broadcastlen[BROADCAST_ID_3]);
+//	}
+//	if((g8broadcastmask & BROADCAST_MASK_4) == BROADCAST_MASK_4)
+//	{
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_4][BUFFER_ID_TRANSFER], g32broadcastlen[BROADCAST_ID_4]);
+//	}
+//	if((g8broadcastmask & BROADCAST_MASK_5) == BROADCAST_MASK_5)
+//	{
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_5][BUFFER_ID_TRANSFER], g32broadcastlen[BROADCAST_ID_5]);
+//	}
+//	if((g8broadcastmask & BROADCAST_MASK_6) == BROADCAST_MASK_6)
+//	{
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_6][BUFFER_ID_TRANSFER], g32broadcastlen[BROADCAST_ID_6]);
+//	}
+//	if((g8broadcastmask & BROADCAST_MASK_7) == BROADCAST_MASK_7)
+//	{
+//		ioDevWrite(DEV_NUM_UART_1M_MST2MST, g8broadcastbuf[BROADCAST_ID_7][BUFFER_ID_TRANSFER], g32broadcastlen[BROADCAST_ID_7]);
+//	}
+}
+
+static void send_telemetry(uint32_t ms)
+{
+//	uint8_t m8data[16] = {0};
+	for(int i = 0;i<8;i++)
+	{
+		if((local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS1) ||
+				(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS2) ||
+				(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS3) ||
+				(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS4 )||
+				(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS5 )||
+				(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS6 )||
+				(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS7 )||
+				(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS8 ))
+		{
+			if(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS3 && (ms%1000 ==  0)) //1s
+			{
+				if(local_telemetry_class1[i][1] == 0)
+					ioDevWrite(DEV_NUM_CAN_A,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+				else if(local_telemetry_class1[i][1] == 1)
+					ioDevWrite(DEV_NUM_CAN_B,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+			}
+			else if(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS4 && (ms%8000 ==  0)) //8s
+			{
+				if(local_telemetry_class1[i][1] == 0)
+					ioDevWrite(DEV_NUM_CAN_A,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+				else if(local_telemetry_class1[i][1] == 1)
+					ioDevWrite(DEV_NUM_CAN_B,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+			}
+			else if(local_telemetry_class1[i][0] == UART_CMD_TELEMETRY_CLASS5 && (ms%16000 ==  0)) //16
+			{
+				if(local_telemetry_class1[i][1] == 0)
+					ioDevWrite(DEV_NUM_CAN_A,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+				else if(local_telemetry_class1[i][1] == 1)
+					ioDevWrite(DEV_NUM_CAN_B,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+			}
+			else
+			{
+				if(local_telemetry_class1[i][1] == 0)
+					ioDevWrite(DEV_NUM_CAN_A,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+				else if(local_telemetry_class1[i][1] == 1)
+					ioDevWrite(DEV_NUM_CAN_B,local_telemetry_class1[i]+4,local_telemetry_class1[i][3]);
+			}
+
+
+
+		}
+	}
+//
+//	if((g8telemetrymask & TELEMETRY_MASK_0) == TELEMETRY_MASK_0)
+//	{
+////		ioDevWrite();
+//	}
+//	if((g8telemetrymask & TELEMETRY_MASK_1) == TELEMETRY_MASK_1)
+//	{
+//
+//	}
+//	if((g8telemetrymask & TELEMETRY_MASK_2) == TELEMETRY_MASK_2)
+//	{
+//
+//	}
+//	if((g8telemetrymask & TELEMETRY_MASK_3) == TELEMETRY_MASK_3)
+//	{
+//
+//	}
+//	if((g8telemetrymask & TELEMETRY_MASK_4) == TELEMETRY_MASK_4)
+//	{
+//
+//	}
+//	if((g8telemetrymask & TELEMETRY_MASK_5) == TELEMETRY_MASK_5)
+//	{
+//
+//	}
+//	if((g8telemetrymask & TELEMETRY_MASK_6) == TELEMETRY_MASK_6)
+//	{
+//
+//	}
+//	if((g8telemetrymask & TELEMETRY_MASK_7) == TELEMETRY_MASK_7)
+//	{
+//
+//	}
+}
+uint32_t ms = 0;
+void user_timer_intr_handler()
+{
+
+	ms+=250;
+	//ms+=1000;
+	if(gUpdateTimeFlag)
+	{
+		g32SecondCnt = g32SecondCntTmp;
+		gUpdateTimeFlag = 0;
+	}
+	else
+	{
+		if(!g8PauseTimeFlag)
+		{
+			g32SecondCnt++;
+		}
+	}
+
+	send_broadcast(ms);
+	if(g8stopTelemetry)
+		send_telemetry(ms);
+}
+
+void pl_config(void)
+{
+#ifdef DRIVER_ENABLE_USER_IP
+
+	Xil_Out32(0x80038,6192);
+//	Xil_Out32(0x8003C,64);
+	Xil_Out32(0x8003C,63);			///////////////////
+	Xil_Out32(0x80014,6144);
+	Xil_Out32(0x80014,0x34F3FA);
+	Xil_Out32(0x80018,0xA4A3A2A1);
+	Xil_Out32(0x8001c,0xC4C3C2C1);
+
+
+
+
+
+
+//	Xil_Out32(0x210014,0xa);
+//	//Xil_Out32(0x210004,0xB1C3D0);
+//	Xil_Out32(0x210004,12675);
+
+	Xil_Out32(0x150000,6192);
+	Xil_Out32(0x150004,1024);
+	Xil_Out32(0x150008,6192*16);
+	Xil_Out32(0x15000c,1024/16);
+	Xil_Out32(0x150020,0x80000000);
+	Xil_Out32(0x150028,48);
+	Xil_Out32(0x15002c,6144);
+
+	Xil_Out32(0x150010,6192);
+	Xil_Out32(0x150014,1024);
+	Xil_Out32(0x150018,6192*16);
+	Xil_Out32(0x15001c,1024/16);
+	Xil_Out32(0x150024,0x84000000);
+	Xil_Out32(0x150030,48);
+	Xil_Out32(0x150034,6144);
+	Xil_Out32(0x150038,4);
+
+	Xil_Out32(0x130000,6192);
+	Xil_Out32(0x130004,1024);
+	Xil_Out32(0x130008,6192*16);
+	Xil_Out32(0x13000c,1024/16);
+	Xil_Out32(0x130020,0x88000000);
+	Xil_Out32(0x130028,48);
+	Xil_Out32(0x13002c,6144);
+	Xil_Out32(0x130010,6192);
+	Xil_Out32(0x130014,1024);
+	Xil_Out32(0x130018,6192*16);
+	Xil_Out32(0x13001c,1024/16);
+	Xil_Out32(0x130024,0x8c000000);
+	Xil_Out32(0x130030,48);
+	Xil_Out32(0x130034,6144);
+	Xil_Out32(0x130038,4);
+
+	Xil_Out32(0x140000,6192);
+	Xil_Out32(0x140004,1024);
+	Xil_Out32(0x140008,6192*16);
+	Xil_Out32(0x14000c,1024/16);
+	Xil_Out32(0x140020,0x90000000);
+	Xil_Out32(0x140028,48);
+	Xil_Out32(0x14002c,6144);
+	Xil_Out32(0x140010,6192);
+	Xil_Out32(0x140014,1024);
+	Xil_Out32(0x140018,6192*16);
+	Xil_Out32(0x14001c,1024/16);
+	Xil_Out32(0x140024,0x94000000);
+	Xil_Out32(0x140030,48);
+	Xil_Out32(0x140034,6144);
+	Xil_Out32(0x140038,4);
+
+	Xil_Out32(0x160000,6192);
+	Xil_Out32(0x160004,1024);
+	Xil_Out32(0x160008,6192*16);
+	Xil_Out32(0x16000c,1024/16);
+	Xil_Out32(0x160020,0x98000000);
+	Xil_Out32(0x160028,48);
+	Xil_Out32(0x16002c,6144);
+	Xil_Out32(0x160010,6192);
+	Xil_Out32(0x160014,1024);
+	Xil_Out32(0x160018,6192*16);
+	Xil_Out32(0x16001c,1024/16);
+	Xil_Out32(0x160024,0x9c000000);
+	Xil_Out32(0x160030,48);
+	Xil_Out32(0x160034,6144);
+	Xil_Out32(0x160038,4);
+//	Xil_Out32(0x80000,0x1);
+//	Xil_Out32(0x80000,0x0);
+//	opFlag = 1;
+
+	//Xil_Out32(0x210000,0xaaaa);
+
+
+#endif
+}
