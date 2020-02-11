@@ -1,0 +1,179 @@
+[
+    [
+        "param_Name",
+        "param_Type",
+        "param_BelongGroup",
+        "param_StartBit",
+        "param_AnalysisBits"
+    ],
+    [
+        {
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "分隔符",
+            "param_StartBit": 0,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "载荷标识",
+            "param_StartBit": 8,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "通道标识",
+            "param_StartBit": 10,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "普段标识",
+            "param_StartBit": 12,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "预留标识",
+            "param_StartBit": 14,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "行计数",
+            "param_StartBit": 16,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "帧计数",
+            "param_StartBit": 24,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "行同步对应内部时间计数",
+            "param_StartBit": 26,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "卫星辅助数据：W0~W30",
+            "param_StartBit": 34,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "卫星辅助数据：W31~W61",
+            "param_StartBit": 96,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "卫星辅助数据：W62~W92",
+            "param_StartBit": 158,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "卫星辅助数据：W93~W123",
+            "param_StartBit": 220,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "卫星辅助数据：W124~W143",
+            "param_StartBit": 282,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据1-30",
+            "param_StartBit": 344,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据31-60",
+            "param_StartBit": 406,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据61-90",
+            "param_StartBit": 468,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据91-120",
+            "param_StartBit": 530,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据121-150",
+            "param_StartBit": 592,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据151-180",
+            "param_StartBit": 654,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据181-210",
+            "param_StartBit": 716,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据211-240",
+            "param_StartBit": 778,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据241-270",
+            "param_StartBit": 840,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据271-300",
+            "param_StartBit": 902,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 62,
+            "param_BelongGroup": "宽幅可见辅助",
+            "param_Name": "相机状态辅助数据301-330",
+            "param_StartBit": 964,
+            "param_Type": 1
+        }
+    ]
+]

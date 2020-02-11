@@ -1,0 +1,237 @@
+{
+   "ProjectName" : "HY-3A海岸带成像仪",
+   "DeviceType" : "Dalsa",
+   "DeviceIndex" : "0",
+   "CameraType" : "0",
+   "YkycPath" : "ykyc_config/海洋3A海岸带成像仪",
+   "Driver" : {
+      "Type" : "DALSA",
+      "CCFPath" : "5_HY3_A_Default_Default.ccf",
+      "OrigWidth" : 49312,
+      "OrigHeight" : 64,
+      "ImgWidth" : 49312,
+      "ImgHeight" : 64,
+      "PixelBytes" : 2,
+      "BufferCount" : 2,
+      "BufferCacheNum" : 5,
+      "PackageHeadLen" : 0,
+      "PackageTotalLen" : 8142336
+   },
+   "Model" : [
+      {
+         "Camera_ID" : "HY3",
+         "Camera_Analysis_ID" : "00FA",
+         "Camera_ID_Index" : 0,
+         "Camera_ID_IndexLength" : 1,
+         "Camera_Name" : "HY-3A海岸带成像仪",
+         "Camera_AnalysisType" : 1,
+         "Camera_Model" : [
+            {
+               "Model_Name" : "海洋3标准模式",
+               "Model_length" : 64
+            }
+         ],
+         "One_Frame_LineCount" : 64,
+         "One_Frame_LineLength" : 24656,
+         "One_Frame_IncludeGraphicLines" : 1,
+         "One_Line_FZ_Length" : 0,
+         "One_FZ_Lines" : 40,
+         "One_Line_GraphicLength" : 0,
+         "One_Pixel_Length" : 2,
+         "Data_EndianFlag" : 0,
+         "Data_SkipBits" : 0,
+         "Sensor_Lay" : [ 2, 1, 2 ],
+         "Sensor_ID_Index" : 3,
+         "Sensor_ID_IndexLength" : 1,
+         "Sensor_Count" : 2,
+         "Sensor_NumDiff" : 0,
+         "Sensor_NamesAndSizes" : [
+            {
+               "Sensor_ID" : "ALLSpectral",
+               "Sensor_Analysis_ID" : "A1",
+               "Sensor_StartByte" : 0,
+               "Sensor_Name" : "全色",
+               "Sensor_Width" : 24656,
+               "Sensor_Height" : 64,
+               "Sensor_FZ_Width" : 30,
+               "Sensor_FZ_Height" : 50,
+			   "assistDefine":"PAssistDefine.json",
+               "Sensor_SpectralList" : [
+                  {
+                     "Spectral_ID" : "B9",
+                     "Spectral_Name" : "B9",
+                     "Spectral_StartByte" : 40,
+                     "Spectral_Width" : 24656,
+                     "Spectral_Height" : 64
+                  }
+               ]
+            },
+            {
+               "Sensor_ID" : "HY3_GWHTTX",
+               "Sensor_Analysis_ID" : "A2",
+               "Sensor_StartByte" : 0,
+               "Sensor_Name" : "多光谱",
+               "Sensor_Width" : 24656,
+               "Sensor_Height" : 64,
+               "Sensor_FZ_Width" : 40,
+               "Sensor_FZ_Height" : 64,
+			   "assistDefine":"BAssistDefine.json",
+               "Sensor_SpectralList" : [
+                  {
+                     "Spectral_ID" : "B1",
+                     "Spectral_Name" : "B1",
+                     "Spectral_StartByte" : 80,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  },
+                  {
+                     "Spectral_ID" : "B2",
+                     "Spectral_Name" : "B2",
+                     "Spectral_StartByte" : 80,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  },
+                  {
+                     "Spectral_ID" : "B3",
+                     "Spectral_Name" : "B3",
+                     "Spectral_StartByte" : 40,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  },
+                  {
+                     "Spectral_ID" : "B4",
+                     "Spectral_Name" : "B4",
+                     "Spectral_StartByte" : 40,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  },
+                  {
+                     "Spectral_ID" : "B5",
+                     "Spectral_Name" : "B5",
+                     "Spectral_StartByte" : 40,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  },
+                  {
+                     "Spectral_ID" : "B6",
+                     "Spectral_Name" : "B6",
+                     "Spectral_StartByte" : 40,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  },
+                  {
+                     "Spectral_ID" : "B7",
+                     "Spectral_Name" : "B7",
+                     "Spectral_StartByte" : 40,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  },
+                  {
+                     "Spectral_ID" : "B8",
+                     "Spectral_Name" : "B8",
+                     "Spectral_StartByte" : 40,
+                     "Spectral_Width" : 3072,
+                     "Spectral_Height" : 64
+                  }
+               ]
+            }
+         ]
+      }
+   ],
+   "View" : {
+      "AppTitle" : "HY-3A海岸带成像仪图像采集软件",
+      "SubWindows" : [
+		 {
+            "ID" : "Display-B9",
+            "Type" : "DisplayData",
+            "Title" : "全色谱段-B9",
+            "DataSourceType" : "Sensor",
+            "DataSourceID" : "ALLSpectral",
+            "Width" : 12328,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B1",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B1",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B1",
+            "Width" : 3072,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B2",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B2",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B2",
+            "Width" : 3072,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B3",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B3",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B3",
+            "Width" : 3072,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B4",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B4",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B4",
+            "Width" : 3072,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B5",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B5",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B5",
+            "Width" : 3072,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B6",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B6",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B6",
+            "Width" : 3072,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B7",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B7",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B7",
+            "Width" : 3072,
+            "Height" : 64
+         },
+		 {
+            "ID" : "Display-B8",
+            "Type" : "DisplayData",
+            "Title" : "多光谱谱段-B8",
+            "DataSourceType" : "Spectral",
+            "DataSourceID" : "B8",
+            "Width" : 3072,
+            "Height" : 64
+         },
+         {
+            "ID" : "Log",
+            "Type" : "Log",
+            "Title" : "日志"
+         },
+         {
+            "ID" : "Assist",
+            "Type" : "AssistTable",
+            "Title" : "辅助数据"
+         }
+      ]
+   }
+}

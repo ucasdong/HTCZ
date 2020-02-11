@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThemeWidgetForm</class>
+ <widget class="QWidget" name="ThemeWidgetForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="themeLabel">
+          <property name="text">
+           <string>Theme:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="themeComboBox"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="animatedLabel">
+          <property name="text">
+           <string>Animation:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="animatedComboBox"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="legendLabel">
+          <property name="text">
+           <string>Legend:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="legendComboBox"/>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="antialiasCheckBox">
+          <property name="text">
+           <string>Anti-aliasing</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_selectAll">
+          <property name="text">
+           <string>全选</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_unSelectAll">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: #1DB0E0;
+;	border-radius: 3px;
+	padding:6px;
+	color:white;
+}
+QPushButton:hover{
+	background-color:#2ECBFF; 
+	color: white;
+}</string>
+          </property>
+          <property name="text">
+           <string>反选</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_save">
+          <property name="text">
+           <string>保存图片</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>themeComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>updateUI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>antialiasCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>updateUI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>legendComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>updateUI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>animatedComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>updateUI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_selectAll</sender>
+   <signal>clicked()</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>selectAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_unSelectAll</sender>
+   <signal>clicked()</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>unselectAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>877</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_save</sender>
+   <signal>clicked()</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>savePic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>859</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateUI()</slot>
+  <slot>selectAll()</slot>
+  <slot>unselectAll()</slot>
+  <slot>savePic()</slot>
+ </slots>
+</ui>

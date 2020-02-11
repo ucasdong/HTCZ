@@ -1,0 +1,185 @@
+{
+	"WINDOW_LAY": [
+        2,
+        4
+    ],
+    "WINDOW_COMBOXPARAMS": {
+        "前视相机1主体": "1",
+        "前视相机2主体": "2",
+        "后视相机1主体": "3",
+        "后视相机2主体": "4",
+		"B1谱段": "1",
+        "B2谱段": "2",
+        "B3谱段": "3",
+        "B4谱段": "4",
+        "B5谱段": "5",
+        "B6谱段": "6",
+		"B7谱段": "7",
+        "B8谱段": "8",
+		"不调整": "0",
+		"对地成像模式": "1",
+        "反演参数上注模式": "2",
+        "校正系数上注模式": "3",
+		"参数计算开": "195",
+        "参数计算关": "60",
+        "不动作": "0"
+    },
+    "groups": [
+		{
+            "Param_GroupName": "任意指令:0",
+            "vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"W2_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3_16,8"
+				],
+				[
+					"Param_LineEdit",
+					"W4_8,8"
+				],
+				[
+					"Param_LineEdit",
+					"W5_0,8"
+				],
+				[
+				 "Param_SendButton",
+				 "发送:255"
+				]	
+            ]
+        },
+		 {
+            "Param_GroupName": "算法开关:0",
+            "vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"暗像元校正D7_31,1"
+				],
+				[
+					"Param_LineEdit",
+					"暗像元校正D6_30,1"
+				],
+				[
+					"Param_LineEdit",
+					"暗像元校正D5_29,1"
+				],
+				[
+					"Param_LineEdit",
+					"暗像元校正D4_28,1"
+				],
+				[
+					"Param_LineEdit",
+					"D3-D0_24,4"
+				],
+				[
+					"Param_SendButton",
+					"发送:67"
+				] 
+            ]
+        },
+        {
+            "Param_GroupName": "增益:0",
+            "vecTypeToName": [
+				[
+					"Param_Combox",
+					"普段选择:B1谱段,B2谱段,B3谱段,B4谱段,B5谱段,B6谱段,B7谱段,B8谱段,不调整_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"增益代码设置_8,16"
+				],
+				[
+					"Param_SendButton",
+				    "发送:65"
+				]         
+            ]
+        },
+        {
+            "Param_GroupName": "曝光时间:0",
+            "vecTypeToName": [
+				[
+					 "Param_Combox",
+					 "普段选择:B1谱段,B2谱段,B3谱段,B4谱段,B5谱段,B6谱段,B7谱段,B8谱段,不调整_24,8"
+				],				   
+				[
+					 "Param_LineEdit",
+					 "曝光时间调整代码_16,8"
+				],
+				[
+					"Param_SendButton",
+					"发送:66"
+				] 
+            ]
+        },
+        {
+            "Param_GroupName": "成像模式:0",
+            "vecTypeToName": [
+				[
+					"Param_Combox",
+					"成像模式设置:对地成像模式,反演参数上注模式,校正系数上注模式,不动作_24,8"
+				],
+				[
+				 "Param_SendButton",
+				 "发送:1"
+				]	
+            ]
+        },
+        {
+            "Param_GroupName": "参数计算开关:0",
+            "vecTypeToName": [
+				[
+					"Param_Combox",
+					"参数计算开关:参数计算开,参数计算关,不动作_24,8"		
+				],
+			    [ 
+					"Param_SendButton",
+					"发送:68"
+				]
+            ]
+        },
+        {
+            "Param_GroupName": "箝位校正参数:0",
+            "vecTypeToName": [
+				[
+					 "Param_Combox",
+					 "普段选择:B1谱段,B2谱段,B3谱段,B4谱段,B5谱段,B6谱段,B7谱段,B8谱段,不调整_24,8"
+				],	
+				[
+					"Param_LineEdit",
+					"W3-K_16,8"
+				],
+				[
+					"Param_LineEdit",
+					"W4-B_8,8"
+				],
+				[
+				 "Param_SendButton",
+				 "发送:69"
+				]
+            ]
+        },
+        {
+            "Param_GroupName": "大气校正仪间接指令应答:1",
+            "vecTypeToName": [		
+				[
+					"Param_Label",
+					"仲裁控制场:4448H"
+				],			
+				[
+					"Param_Label",
+					"有效数据T-W0:04FFH"
+				],
+				[
+					"Param_Label",
+					"有效数据W1-W5:20FF20FF20H"
+				],
+				[
+					"Param_SendButton",
+					"发送:32"
+				]                
+            ]
+        }
+    ]
+}

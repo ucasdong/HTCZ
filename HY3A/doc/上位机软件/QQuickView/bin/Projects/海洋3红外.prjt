@@ -1,0 +1,1504 @@
+{
+   "ProjectName" : "海洋3红外",
+   "DeviceType" : "Dalsa",
+   "DeviceIndex" : "0",
+   "CameraType" : "0",
+   "YkycPath":"ykyc_config/HY3_红外",
+   "Driver":{
+		"Type" : "DALSA",
+		"CCFPath": "HY3.ccf",
+		"OrigWidth" : 2304,
+		"OrigHeight" : 3534,
+		"ImgWidth" : 860,
+		"ImgHeight" : 3534,
+		"PixelBytes" : 2,
+		"BufferCount" : 2,
+		"BufferCacheNum" : 5,
+		"PackageHeadLen" : 0,
+		"PackageTotalLen" : 8142336
+	},
+   "Model" : [
+        {
+			"Camera_ID": "HY3",
+			"Camera_Analysis_ID": "FA",
+			"Camera_ID_Index": 0,
+			"Camera_ID_IndexLength": 1,
+			"Camera_Name": "海洋3红外视频处理器",
+			"Camera_AnalysisType": 1,
+			"Camera_Model":[
+				{
+					"Model_Name":"海洋3标准模式",
+				    "Model_length":430
+				}
+			],
+			"Camera_RecvNothingTime": 2,
+            "One_Frame_LineCount": 3534,
+			"One_Frame_LineLength": 430,
+			"One_Frame_IncludeGraphicLines": 1,
+			"One_Line_FZ_Length": 430,
+			"One_FZ_Lines": 14,
+			"One_Line_GraphicLength": 430,
+			"One_Pixel_Length": 2,
+			"Data_EndianFlag":0,
+			"Data_SkipBits":0,			
+			"Sensor_Lay": [2,1,2],
+			"Sensor_ID_Index": 3,
+			"Sensor_ID_IndexLength": 1,
+			"Sensor_Count": 5,
+			"Sensor_NumDiff": 0,
+			"Sensor_NamesAndSizes": 
+			[
+				{
+					"Sensor_ID": "HY3_MFSTX",
+					"Sensor_Analysis_ID": "2AA8",
+					"Sensor_StartByte": 27520,
+					"Sensor_Name": "漫反射图像",
+					"Sensor_Width": 430,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "MFSTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 110,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 190,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 270,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 350,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_GWHTTX",
+					"Sensor_Analysis_ID": "2EEC",
+					"Sensor_StartByte": 1498120,
+					"Sensor_Name": "高温黑体图像",
+					"Sensor_Width": 430,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "GWHTTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 110,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 190,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 270,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 350,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_DWTX",
+					"Sensor_Analysis_ID": "3330",
+					"Sensor_StartByte": 1476620,
+					"Sensor_Name": "地物图像",
+					"Sensor_Width": 430,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "DWTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 110,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 190,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 270,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 350,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_LKJTX",
+					"Sensor_Analysis_ID": "3774",
+					"Sensor_StartByte": 6020,
+					"Sensor_Name": "冷空间图像",
+					"Sensor_Width": 430,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "LKJTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 110,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 190,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 270,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 350,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_DWHTTX",
+					"Sensor_Analysis_ID": "3BB8",
+					"Sensor_StartByte": 49020,
+					"Sensor_Name": "低温黑体图像",
+					"Sensor_Width": 430,
+					"Sensor_Height": 3320,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "DWHTTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 3320
+						},
+						{
+							"Spectral_ID": "DWHTTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 110,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 3320
+						},
+						{
+							"Spectral_ID": "DWHTTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 190,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 3320
+						},
+						{
+							"Spectral_ID": "DWHTTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 270,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 3320
+						},
+						{
+							"Spectral_ID": "DWHTTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 350,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 3320
+						}
+					]
+				}
+			]					
+		}      
+   ],
+   "View" : {
+		"AppTitle" : "红外视频处理器图像采集软件",
+		"SubWindows" : [
+			{
+				"ID" : "Display-Camera",
+				"Type" :"DisplayData",
+				"Title":"探测器1",
+				"DataSourceType":"Camera",
+				"DataSourceID":"HY3",
+				"Width":430,
+				"Height":3534,
+				"TableColorDefine":[
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":7,
+						"Col-Max":11,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":12,
+						"Col-Max":16,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":17,
+						"Col-Max":20,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":21,
+						"Col-Max":24,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":25,
+						"Col-Max":28,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":29,
+						"Col-Max":29,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":30,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":31,
+						"Col-Max":36,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":37,
+						"Col-Max":40,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":41,
+						"Col-Max":81,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":82,
+						"Col-Max":85,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":86,
+						"Col-Max":333,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":334,
+						"Col-Max":380,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":1,
+						"Row-Max":1,
+						"Col-Min":381,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":7,
+						"Col-Max":11,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":12,
+						"Col-Max":16,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":17,
+						"Col-Max":20,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":21,
+						"Col-Max":24,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":25,
+						"Col-Max":28,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":29,
+						"Col-Max":29,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":30,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":31,
+						"Col-Max":36,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":37,
+						"Col-Max":40,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":41,
+						"Col-Max":81,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":82,
+						"Col-Max":85,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":86,
+						"Col-Max":333,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":334,
+						"Col-Max":380,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":3,
+						"Row-Max":3,
+						"Col-Min":381,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":7,
+						"Col-Max":11,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":12,
+						"Col-Max":16,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":17,
+						"Col-Max":20,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":21,
+						"Col-Max":24,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":25,
+						"Col-Max":28,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":29,
+						"Col-Max":29,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":30,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":31,
+						"Col-Max":36,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":37,
+						"Col-Max":40,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":41,
+						"Col-Max":81,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":82,
+						"Col-Max":85,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":86,
+						"Col-Max":333,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":334,
+						"Col-Max":380,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":5,
+						"Row-Max":5,
+						"Col-Min":381,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":7,
+						"Col-Max":11,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":12,
+						"Col-Max":16,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":17,
+						"Col-Max":20,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":21,
+						"Col-Max":24,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":25,
+						"Col-Max":28,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":29,
+						"Col-Max":29,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":30,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":31,
+						"Col-Max":36,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":37,
+						"Col-Max":40,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":41,
+						"Col-Max":81,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":82,
+						"Col-Max":85,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":86,
+						"Col-Max":333,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":334,
+						"Col-Max":380,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":7,
+						"Row-Max":7,
+						"Col-Min":381,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":7,
+						"Col-Max":11,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":12,
+						"Col-Max":16,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":17,
+						"Col-Max":20,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":21,
+						"Col-Max":24,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":25,
+						"Col-Max":28,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":29,
+						"Col-Max":29,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":30,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":31,
+						"Col-Max":36,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":37,
+						"Col-Max":40,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":41,
+						"Col-Max":81,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":82,
+						"Col-Max":85,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":86,
+						"Col-Max":333,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":334,
+						"Col-Max":380,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":9,
+						"Row-Max":9,
+						"Col-Min":381,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					}
+					,
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":7,
+						"Col-Max":11,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":12,
+						"Col-Max":16,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":17,
+						"Col-Max":20,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":21,
+						"Col-Max":24,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":25,
+						"Col-Max":28,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":29,
+						"Col-Max":29,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":30,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":31,
+						"Col-Max":36,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":37,
+						"Col-Max":40,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":41,
+						"Col-Max":81,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":82,
+						"Col-Max":85,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":86,
+						"Col-Max":333,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":334,
+						"Col-Max":380,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":11,
+						"Row-Max":11,
+						"Col-Min":381,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":7,
+						"Col-Max":11,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":12,
+						"Col-Max":16,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":17,
+						"Col-Max":20,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":21,
+						"Col-Max":24,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":25,
+						"Col-Max":28,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":29,
+						"Col-Max":29,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":30,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":31,
+						"Col-Max":36,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":37,
+						"Col-Max":40,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":41,
+						"Col-Max":81,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":82,
+						"Col-Max":85,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":86,
+						"Col-Max":333,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":334,
+						"Col-Max":380,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":13,
+						"Row-Max":13,
+						"Col-Min":381,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":2,
+						"Row-Max":2,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":2,
+						"Row-Max":2,
+						"Col-Min":5,
+						"Col-Max":23,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":2,
+						"Row-Max":2,
+						"Col-Min":24,
+						"Col-Max":24,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":2,
+						"Row-Max":2,
+						"Col-Min":25,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":2,
+						"Row-Max":2,
+						"Col-Min":31,
+						"Col-Max":254,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":2,
+						"Row-Max":2,
+						"Col-Min":255,
+						"Col-Max":260,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":2,
+						"Row-Max":2,
+						"Col-Min":261,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":4,
+						"Row-Max":4,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":4,
+						"Row-Max":4,
+						"Col-Min":5,
+						"Col-Max":23,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":4,
+						"Row-Max":4,
+						"Col-Min":24,
+						"Col-Max":24,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":4,
+						"Row-Max":4,
+						"Col-Min":25,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":4,
+						"Row-Max":4,
+						"Col-Min":31,
+						"Col-Max":254,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":4,
+						"Row-Max":4,
+						"Col-Min":255,
+						"Col-Max":260,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":4,
+						"Row-Max":4,
+						"Col-Min":261,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":6,
+						"Row-Max":6,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":6,
+						"Row-Max":6,
+						"Col-Min":5,
+						"Col-Max":23,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":6,
+						"Row-Max":6,
+						"Col-Min":24,
+						"Col-Max":24,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":6,
+						"Row-Max":6,
+						"Col-Min":25,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":6,
+						"Row-Max":6,
+						"Col-Min":31,
+						"Col-Max":254,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":6,
+						"Row-Max":6,
+						"Col-Min":255,
+						"Col-Max":260,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":6,
+						"Row-Max":6,
+						"Col-Min":261,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":8,
+						"Row-Max":8,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":8,
+						"Row-Max":8,
+						"Col-Min":5,
+						"Col-Max":23,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":8,
+						"Row-Max":8,
+						"Col-Min":24,
+						"Col-Max":24,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":8,
+						"Row-Max":8,
+						"Col-Min":25,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":8,
+						"Row-Max":8,
+						"Col-Min":31,
+						"Col-Max":254,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":8,
+						"Row-Max":8,
+						"Col-Min":255,
+						"Col-Max":260,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":8,
+						"Row-Max":8,
+						"Col-Min":261,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":10,
+						"Row-Max":10,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":10,
+						"Row-Max":10,
+						"Col-Min":5,
+						"Col-Max":23,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":10,
+						"Row-Max":10,
+						"Col-Min":24,
+						"Col-Max":24,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":10,
+						"Row-Max":10,
+						"Col-Min":25,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":10,
+						"Row-Max":10,
+						"Col-Min":31,
+						"Col-Max":254,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":10,
+						"Row-Max":10,
+						"Col-Min":255,
+						"Col-Max":260,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":10,
+						"Row-Max":10,
+						"Col-Min":261,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":12,
+						"Row-Max":12,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":12,
+						"Row-Max":12,
+						"Col-Min":5,
+						"Col-Max":23,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":12,
+						"Row-Max":12,
+						"Col-Min":24,
+						"Col-Max":24,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":12,
+						"Row-Max":12,
+						"Col-Min":25,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":12,
+						"Row-Max":12,
+						"Col-Min":31,
+						"Col-Max":254,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":12,
+						"Row-Max":12,
+						"Col-Min":255,
+						"Col-Max":260,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":12,
+						"Row-Max":12,
+						"Col-Min":261,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":14,
+						"Row-Max":14,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":14,
+						"Row-Max":14,
+						"Col-Min":5,
+						"Col-Max":23,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":14,
+						"Row-Max":14,
+						"Col-Min":24,
+						"Col-Max":24,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":14,
+						"Row-Max":14,
+						"Col-Min":25,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":14,
+						"Row-Max":14,
+						"Col-Min":31,
+						"Col-Max":254,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":14,
+						"Row-Max":14,
+						"Col-Min":255,
+						"Col-Max":260,
+						"Color":"darkYellow"
+					},
+					{
+						"Row-Min":14,
+						"Row-Max":14,
+						"Col-Min":261,
+						"Col-Max":430,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":1,
+						"Col-Max":4,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":5,
+						"Col-Max":6,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":7,
+						"Col-Max":8,
+						"Color":"darkBlue"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":9,
+						"Col-Max":10,
+						"Color":"darkCyan"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":11,
+						"Col-Max":12,
+						"Color":"darkMagenta"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":13,
+						"Col-Max":15,
+						"Color":"darkRed"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":16,
+						"Col-Max":19,
+						"Color":"darkGreen"
+					},
+					{
+						"Row-Min":15,
+						"Row-Max":3534,
+						"Col-Min":20,
+						"Col-Max":30,
+						"Color":"darkYellow"
+					}
+				]
+			},
+			{
+				"ID" : "Log",
+				"Type" :"Log",
+				"Title":"日志"
+			},
+			{
+				"ID" : "Assist",
+				"Type" :"AssistTable",
+				"Title":"辅助数据"
+			}
+		]
+	}
+}

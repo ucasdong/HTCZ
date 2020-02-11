@@ -1,0 +1,457 @@
+{
+	"WINDOW_LAY": 
+	[
+		4,
+		5
+	],
+    "WINDOW_COMBOXPARAMS": 
+	{
+		"单元1": 1,
+		"单元2": 2,
+		"单元3": 3,
+		"单元4": 4,
+		"单元5": 5,
+		"单元6": 6,
+		"单元7": 7,
+		"单元8": 8,
+		"单元9": 9,
+		"单元10": 10,
+		"单元11": 11,
+		"单元12": 12,
+		"开始待机": 195,
+		"停止待机": 60,
+		"开": 1,
+		"关": 0,
+		"第1档": 1,
+		"第2档": 2,
+		"第3档": 3,
+		"第4档": 4,
+		"第5档": 5,
+		"第6档": 6,
+		"第7档": 7,
+		"第8档": 8,
+		"C3H-正扫": 195,
+		"3CH-反扫": 60,
+		"正序输出": 195,
+		"逆序输出": 60,
+		"3CH(关)": 60,
+		"C3H(开)": 195,
+		"主份加电1": 1,
+		"主份加电2": 16,
+		"主份断电": 17,
+		"备份加电1": 0,
+		"备份加电2": 1,
+		"备份断电": 16,
+		"主口": 1,
+		"备口": 0,
+		"速变轮询": 1,
+		"缓变轮询": 2,
+		"上注轮询": 3,
+		"速变轮询关": 4,
+		"缓变轮询关": 5,
+		"上注轮询关": 6
+	},
+    "groups": 
+	[
+		{
+            "Param_GroupName": "全色级数广播:0",
+            "vecTypeToName":
+			[		
+				[
+					"Param_LineEdit",
+					"W2:P谱段_24,8"
+				],		
+				[
+					"Param_Label",
+					"W3-W5:000000H"
+				],
+				[
+					"Param_SendButton",
+					"发送:66"
+				]                
+            ]
+        },		
+		{
+            "Param_GroupName": "面阵模式开关W2:0",
+            "vecTypeToName": 
+			[
+				[
+					"Param_Combox",
+					"开关W2:3CH(关),C3H(开)_24,8"
+				],
+				[
+					"Param_Label",
+					"W3-W5:000000H"
+				],
+				[
+					"Param_SendButton",
+					"发送:73"
+				] 
+            ]
+        },
+		{
+            "Param_GroupName": "增益广播:0",
+            "vecTypeToName":
+			[		
+				[
+					"Param_LineEdit",
+					"W2:增益_24,8"
+				],		
+				[
+					"Param_Label",
+					"W3-W5:000000H"
+				],
+				[
+					"Param_SendButton",
+					"发送:65"
+				]                
+            ]
+        },        
+        {
+            "Param_GroupName": "正逆序输出设置W2:0",
+            "vecTypeToName":
+			[
+				[
+					 "Param_Combox",
+					 "W2输出设置:正序输出,逆序输出_24,8"
+				],				   
+				[
+					 "Param_Label",
+					 "W3-W5:000000H"
+				],
+				[
+					"Param_SendButton",
+					"发送:71"
+				] 
+            ]
+        },
+		{
+            "Param_GroupName": "程序上注模式设置W2:0",
+            "vecTypeToName":
+			[		
+				[
+					"Param_Combox",
+					"W2程序上注模式:单元1,单元2,单元3,单元4,单元5,单元6,单元7,单元8,单元9,单元10,单元11,单元12,_24,8"
+				],		
+				[
+					"Param_Label",
+					"W3-W5:000000H"
+				],
+				[
+					"Param_SendButton",
+					"发送:2"
+				]                
+            ]
+        },
+        {
+            "Param_GroupName": "参数上注模式设置W2:0",
+            "vecTypeToName":
+			[		
+				[
+					"Param_Combox",
+					"W2参数上注模式:单元1,单元2,单元3,单元4,单元5,单元6,单元7,单元8,单元9,单元10,单元11,单元12,_24,8"
+				],		
+				[
+					"Param_Label",
+					"W3-W5:000000H"
+				],
+				[
+					"Param_SendButton",
+					"发送:1"
+				]                
+            ]
+        },
+        {
+            "Param_GroupName": "线阵TDICMOS正反扫:0",
+            "vecTypeToName": 
+			[
+				[
+					"Param_Combox",
+					"W2扫描模式:C3H-正扫,3CH-反扫_24,8"
+				],
+				[
+					 "Param_Label",
+					 "W3-W5:000000H"
+				],
+				[
+					 "Param_SendButton",
+					 "发送:70"
+				]	
+            ]
+        },
+		{
+            "Param_GroupName": "待机开关模式:0",
+            "vecTypeToName":
+			[		
+				[
+					"Param_Combox",
+					"W2待机开关:开始待机,停止待机_24,8"
+				],		
+				[
+					"Param_Label",
+					"W3-W5:000000H"
+				],
+				[
+					"Param_SendButton",
+					"发送:3"
+				]                
+            ]
+        },       	
+		{
+            "Param_GroupName": "任意指令广播:0",
+            "vecTypeToName": 
+			[
+				[
+					"Param_LineEdit",
+					"W2积分时间低字节_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3积分时间低字节_16,8"
+				],
+				[
+					"Param_LineEdit",
+					"W4积分时间低字节_8,8"
+				],
+				[
+					"Param_LineEdit",
+					"W5积分时间低字节_0,8"
+				],
+				[
+					"Param_SendButton",
+				    "发送:255"
+				]         
+            ]
+        },		
+		{
+            "Param_GroupName": "算法开关广播W2:0",
+            "vecTypeToName": 
+			[
+				[
+					"Param_Combox",
+					"D7暗像元校正:开,关_31,1"									
+				],
+				[
+					"Param_Combox",
+					"D6一致性校正:开,关_30,1"								
+				],
+				[
+					"Param_Combox",
+					"D5箝位校正:开,关_29,1"							
+				],
+				[
+					"Param_Combox",
+					"D4MTFC算法:开,关_28,1"									
+				],
+				[
+					"Param_Combox",
+					"D3超分算法:开,关_27,1"							
+				],
+				[
+					 "Param_Label",
+					 "D2-D0:空闲(0)"
+				],
+			    [ 
+					"Param_SendButton",
+					"发送:68"
+				]
+            ]
+        },		
+		{
+            "Param_GroupName": "多光谱级数广播:0",
+            "vecTypeToName":
+			[		
+				[
+					"Param_LineEdit",
+					"W2:B1谱段_24,8"
+				],		
+				[
+					"Param_LineEdit",
+					"W3:B2谱段_16,8"
+				],
+				[
+					"Param_LineEdit",
+					"W4:B3谱段_8,8"
+				],
+				[
+					"Param_LineEdit",
+					"W5:B4谱段_0,8"
+				],
+				[
+					"Param_SendButton",
+					"发送:67"
+				]                
+            ]
+        },		
+        {
+            "Param_GroupName": "任意指令:0",
+            "vecTypeToName": 
+			[
+				[
+					"Param_LineEdit",
+					"W2积分时间低字节_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3积分时间低字节_16,8"
+				],
+				[
+					"Param_LineEdit",
+					"W4积分时间低字节_8,8"
+				],
+				[
+					"Param_LineEdit",
+					"W5积分时间低字节_0,8"
+				],
+				[
+					"Param_SendButton",
+				    "发送:72"
+				]         
+            ]
+        },
+		{
+            "Param_GroupName": "切换模式:3",
+            "vecTypeToName": 
+			[
+				[
+					 "Param_Combox",
+					 "选择:标准模式,超分模式_0,8"
+				],	
+				[
+				 "Param_SendButton",
+				 "发送:19"
+				]	
+            ]
+        },
+		{
+            "Param_GroupName": "主备口切换:4",
+            "vecTypeToName": 
+			[
+				[
+					 "Param_Combox",
+					 "选择:主口,备口_0,8"
+				],	
+				[
+				 "Param_SendButton",
+				 "发送:19"
+				]	
+            ]
+        },
+		{
+            "Param_GroupName": "加电断电:1",
+            "vecTypeToName": 
+			[
+				[
+					 "Param_Combox",
+					 "选择:主份加电1,主份加电2,主份断电,备份加电1,备份加电2,备份断电_0,8"
+				],	
+				[
+				 "Param_SendButton",
+				 "发送:17"
+				]	
+            ]
+        },
+		{
+            "Param_GroupName": "获取AN(电压)信息:2",
+            "vecTypeToName": 
+			[
+				[
+				 "Param_SendButton",
+				 "发送:18"
+				]	
+            ]
+        },
+{
+            "Param_GroupName": "MTFC算法档位广播W2:0",
+            "vecTypeToName": 
+			[
+				[
+					 "Param_Combox",
+					 "W2档位选择:第1档,第2档,第3档,第4档,第5档,第6档,第7档,第8档_24,8"
+				],	
+				[
+					 "Param_Label",
+					 "W3:00H"
+				],
+				[
+					 "Param_Label",
+					 "W4:00H"
+				],
+				[
+					 "Param_Label",
+					 "W5:00H"
+				],
+				[
+					 "Param_SendButton",
+					 "发送:69"
+				]
+            ]
+        },
+		{
+            "Param_GroupName": "积分时间设置:0",
+            "vecTypeToName": 
+			[
+				[
+					"Param_LineEdit",
+					"W2积分时间低字节_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3积分时间低字节_16,8"
+				],
+				[
+					"Param_Label",
+					"W4:00H"
+				],
+				[
+					"Param_Label",
+					"W5:00H"
+				],
+				[
+				 "Param_SendButton",
+				 "发送:74"
+				]	
+            ]
+        },
+        {
+            "Param_GroupName": "遥测开关控制:5",
+            "vecTypeToName": 
+			[		
+				[
+					"Param_Combox",
+					"遥测类型:速变轮询,缓变轮询,上注轮询,速变轮询关,缓变轮询关,上注轮询关_0,8"
+				],
+				[
+					"Param_Label",
+					"速变轮询:810800100110011001H"
+				],			
+				[
+					"Param_Label",
+					"缓变轮询:810800100210021002H"
+				],
+				[
+					"Param_Label",
+					"上注轮询:810800100310031003H"
+				],
+				[
+					"Param_SendButton",
+					"发送:4"
+				]                
+            ]
+        },
+        {
+            "Param_GroupName": "图像帧校验:6",
+            "vecTypeToName": 
+			[		
+				[
+					"Param_Label",
+					"图像帧校验:2000H"
+				],			
+				[
+					"Param_SendButton",
+					"发送:4"
+				]                
+            ]
+        }		
+    ]
+}

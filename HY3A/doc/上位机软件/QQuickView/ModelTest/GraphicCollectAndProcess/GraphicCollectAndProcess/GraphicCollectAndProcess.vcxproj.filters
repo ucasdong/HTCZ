@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{35e85780-0866-4334-b746-89735235617b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{ef2255eb-dacd-4a25-bb44-c5b124fbd3d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver">
+      <UniqueIdentifier>{bb392976-fd5c-449f-b5d7-af01308a4769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver\driver">
+      <UniqueIdentifier>{db086c9f-4d6c-4536-b31f-4e7f5725ff61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver\factory">
+      <UniqueIdentifier>{983ea073-3f74-4a10-8249-6cf09498ed89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver\interface">
+      <UniqueIdentifier>{f6fc3b1f-6a48-41d7-8103-610305dfc676}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicCollectAndProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyScrollArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowSetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigIni.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TableModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TableView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qcustomplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CurveWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QImageView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PixItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TableStringModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TableStringView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveSettingWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeDataAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="broadcast\DataBlockBroadcast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainInputClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PickPkgContent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialPortClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryReplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PickPkg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Model\AnalysisModel.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Model\DataAnalysisModel.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Include\CommonHeader.cpp">
+      <Filter>Include</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Model\GrabImageData.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveData.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Driver\driverdata\driver\C1500Driver.cpp">
+      <Filter>Driver\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Driver\driverdata\driver\CDALSADriver.cpp">
+      <Filter>Driver\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Driver\driverdata\factory\C1500Factory.cpp">
+      <Filter>Driver\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Driver\driverdata\factory\CDALSAFactory.cpp">
+      <Filter>Driver\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Driver\driverdata\interface\CDataTransmission.cpp">
+      <Filter>Driver\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Driver\driverdata\interface\CDriverData.cpp">
+      <Filter>Driver\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Driver\driverdata\interface\CDriverOperator.cpp">
+      <Filter>Driver\interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="GraphicCollectAndProcess.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GraphicLabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyScrollArea.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DataTable.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ShowSetting.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ConfigIni.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyGroupBox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TableModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TableView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CurveWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QImageView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CmdWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Common.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TableStringModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TableStringView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SaveSettingWnd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MainInputClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SerialPortClass.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="HistoryReplay.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CodeDataAnalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\Model\AnalysisModel.h">
+      <Filter>Model</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\Model\DataAnalysisModel.h">
+      <Filter>Model</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\Include\CommonHeader.h">
+      <Filter>Include</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\..\Model\GrabImageData.h">
+      <Filter>Model</Filter>
+    </QtMoc>
+    <QtMoc Include="SaveData.h">
+      <Filter>Model</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="GraphicCollectAndProcess.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DataTable.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ShowSetting.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CmdWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SaveSettingWnd.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="CDlgComm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="HistoryReplay.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="GraphicCollectAndProcess.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PixItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="broadcast\DataBlockBroadcast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="broadcast\DataInit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PickPkgContent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PickPkg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\driver\C1500Driver.h">
+      <Filter>Driver\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\driver\CDALSADriver.h">
+      <Filter>Driver\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\driver\CDriver.h">
+      <Filter>Driver\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\factory\C1500Factory.h">
+      <Filter>Driver\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\factory\CDALSAFactory.h">
+      <Filter>Driver\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\factory\CFactory.h">
+      <Filter>Driver\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\interface\CDataTransmission.h">
+      <Filter>Driver\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\interface\CDriverData.h">
+      <Filter>Driver\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Driver\driverdata\interface\CDriverOperator.h">
+      <Filter>Driver\interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

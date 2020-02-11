@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <TargetName>图像采集和处理系统</TargetName>
+    <IncludePath>.\broadcast;C:\Program Files\Teledyne DALSA\Sapera\Classes\Gui;C:\Program Files\Teledyne DALSA\Sapera\Include;C:\Program Files\Teledyne DALSA\Sapera\Classes\Basic;..\..\Model;..\..\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Teledyne DALSA\Sapera\Classes\Basic;C:\Program Files\Teledyne DALSA\Sapera\Lib\Win64\VS2017;C:\Program Files\Teledyne DALSA\Sapera\Classes\Gui;$(LibraryPath)</LibraryPath>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>C:\Program Files\Teledyne DALSA\Sapera\Classes\Gui;C:\Program Files\Teledyne DALSA\Sapera\Classes\Basic;C:\Program Files\Teledyne DALSA\Sapera\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Teledyne DALSA\Sapera\Classes\Basic;C:\Program Files\Teledyne DALSA\Sapera\Classes\Gui;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>QT_QML_DEBUG;WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_PRINTSUPPORT_LIB;QT_SERIALPORT_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);..\..\Model;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;d2d1.lib;shell32.lib;C:\Program Files\Teledyne DALSA\Sapera\Lib\Win64\SapClassBasic.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5PrintSupportd.lib;Qt5SerialPortd.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);..\..\Model;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>QT_QML_DEBUG;WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_PRINTSUPPORT_LIB;QT_SERIALPORT_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_PRINTSUPPORT_LIB;QT_SERIALPORT_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\broadcast;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;C:\Program Files\Teledyne DALSA\Sapera\Lib\Win64\SapClassBasic.lib;C:\Program Files\Teledyne DALSA\Sapera\Lib\Win64\VS2013\SapClassGui.lib;d2d1.lib;Qt5Core.lib;Qt5Gui.lib;Qt5PrintSupport.lib;Qt5SerialPort.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\broadcast;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_PRINTSUPPORT_LIB;QT_SERIALPORT_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Driver\driverdata\driver\C1500Driver.cpp" />
+    <ClCompile Include="..\..\..\Driver\driverdata\driver\CDALSADriver.cpp" />
+    <ClCompile Include="..\..\..\Driver\driverdata\factory\C1500Factory.cpp" />
+    <ClCompile Include="..\..\..\Driver\driverdata\factory\CDALSAFactory.cpp" />
+    <ClCompile Include="..\..\..\Driver\driverdata\interface\CDataTransmission.cpp" />
+    <ClCompile Include="..\..\..\Driver\driverdata\interface\CDriverData.cpp" />
+    <ClCompile Include="..\..\..\Driver\driverdata\interface\CDriverOperator.cpp" />
+    <ClCompile Include="..\..\..\Include\CommonHeader.cpp" />
+    <ClCompile Include="..\..\..\Model\AnalysisModel.cpp" />
+    <ClCompile Include="..\..\..\Model\DataAnalysisModel.cpp" />
+    <ClCompile Include="..\..\..\Model\GrabImageData.cpp" />
+    <ClCompile Include="broadcast\DataBlockBroadcast.cpp" />
+    <ClCompile Include="CmdWindow.cpp" />
+    <ClCompile Include="CodeDataAnalysis.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="ConfigIni.cpp" />
+    <ClCompile Include="CurveWidget.cpp" />
+    <ClCompile Include="DataTable.cpp" />
+    <ClCompile Include="GraphicCollectAndProcess.cpp" />
+    <ClCompile Include="GraphicLabel.cpp" />
+    <ClCompile Include="HistoryReplay.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainInputClass.cpp" />
+    <ClCompile Include="MyGroupBox.cpp" />
+    <ClCompile Include="MyScrollArea.cpp" />
+    <ClCompile Include="PickPkg.cpp" />
+    <ClCompile Include="PickPkgContent.cpp" />
+    <ClCompile Include="PixItem.cpp" />
+    <ClCompile Include="qcustomplot.cpp" />
+    <ClCompile Include="QImageView.cpp" />
+    <ClCompile Include="SaveData.cpp" />
+    <ClCompile Include="SaveSettingWnd.cpp" />
+    <ClCompile Include="SerialPortClass.cpp" />
+    <ClCompile Include="ShowSetting.cpp" />
+    <ClCompile Include="TableModel.cpp" />
+    <ClCompile Include="TableStringModel.cpp" />
+    <ClCompile Include="TableStringView.cpp" />
+    <ClCompile Include="TableView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="GraphicCollectAndProcess.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="CDlgComm.ui" />
+    <QtUic Include="CmdWindow.ui" />
+    <QtUic Include="DataTable.ui" />
+    <QtUic Include="GraphicCollectAndProcess.ui" />
+    <QtUic Include="HistoryReplay.ui" />
+    <QtUic Include="SaveSettingWnd.ui" />
+    <QtUic Include="ShowSetting.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="GraphicCollectAndProcess.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="GraphicLabel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MyScrollArea.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="DataTable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="SaveData.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\..\..\Model;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\broadcast;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+    <QtMoc Include="..\..\..\Model\AnalysisModel.h" />
+    <QtMoc Include="..\..\..\Model\DataAnalysisModel.h" />
+    <QtMoc Include="CodeDataAnalysis.h" />
+    <QtMoc Include="..\..\..\Include\CommonHeader.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\..\..\Model</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\broadcast</IncludePath>
+    </QtMoc>
+    <QtMoc Include="..\..\..\Model\GrabImageData.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\..\..\Model;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\broadcast;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
+    <ClInclude Include="..\..\..\Driver\driverdata\driver\C1500Driver.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\driver\CDALSADriver.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\driver\CDriver.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\factory\C1500Factory.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\factory\CDALSAFactory.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\factory\CFactory.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\interface\CDataTransmission.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\interface\CDriverData.h" />
+    <ClInclude Include="..\..\..\Driver\driverdata\interface\CDriverOperator.h" />
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="PickPkg.h" />
+    <QtMoc Include="SerialPortClass.h" />
+    <QtMoc Include="SaveSettingWnd.h" />
+    <QtMoc Include="TableStringView.h" />
+    <QtMoc Include="TableStringModel.h" />
+    <QtMoc Include="CmdWindow.h" />
+    <QtMoc Include="Common.h" />
+    <ClInclude Include="broadcast\DataBlockBroadcast.h" />
+    <ClInclude Include="broadcast\DataInit.h" />
+    <QtMoc Include="MainInputClass.h" />
+    <QtMoc Include="HistoryReplay.h" />
+    <ClInclude Include="PickPkgContent.h" />
+    <ClInclude Include="PixItem.h" />
+    <QtMoc Include="QImageView.h" />
+    <QtMoc Include="CurveWidget.h" />
+    <QtMoc Include="qcustomplot.h" />
+    <QtMoc Include="TableView.h" />
+    <QtMoc Include="TableModel.h" />
+    <QtMoc Include="MyGroupBox.h" />
+    <QtMoc Include="ConfigIni.h" />
+    <QtMoc Include="ShowSetting.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="Qt5.11.2" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

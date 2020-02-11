@@ -1,0 +1,134 @@
+{
+    "1": {
+        "oneScreenParams": [
+		  {
+            "WINDOW_ID": "01",
+            "WINDOW_FZSize": [
+              48,
+              16
+            ],
+            "WINDOW_Name": "高分可见通道1",
+            "WINDOW_Size": [
+              5168,
+              1000
+            ],
+            "WINDOW_SubRowAndColumn": [
+			  "1",
+			  "1"
+            ],
+            "WINDOW_SubWndCount": 2,
+            "WINDOW_SubWndNames": [
+              "全色谱段图像",
+			  "多光谱段图像"
+            ],
+            "WINDOW_SubWndSizes": [
+              [
+                5168,
+                600
+              ],
+			  [
+                5168,
+                200
+              ]
+            ]
+          },
+		  {
+            "WINDOW_ID": "02",
+            "WINDOW_FZSize": [
+              48,
+              16
+            ],
+            "WINDOW_Name": "高分可见通道2",
+            "WINDOW_Size": [
+              3888,
+              1000
+            ],
+            "WINDOW_SubRowAndColumn": [
+			  "1",
+			  "1"
+            ],
+            "WINDOW_SubWndCount": 2,
+            "WINDOW_SubWndNames": [
+              "全色谱段图像",
+			  "多光谱段图像"
+            ],
+            "WINDOW_SubWndSizes": [
+              [
+                5168,
+                600
+              ],
+			  [
+                5168,
+                200
+              ]
+            ]
+          },
+		  {
+            "WINDOW_ID": "05",
+            "WINDOW_FZSize": [
+              48,
+              16
+            ],
+            "WINDOW_Name": "高分可见通道3",
+            "WINDOW_Size": [
+              5168,
+              1000
+            ],
+            "WINDOW_SubRowAndColumn": [
+			  "1",
+			  "1"
+            ],
+            "WINDOW_SubWndCount": 2,
+            "WINDOW_SubWndNames": [
+              "全色谱段图像",
+			  "多光谱段图像"
+            ],
+            "WINDOW_SubWndSizes": [
+              [
+                5168,
+                600
+              ],
+			  [
+                5168,
+                200
+              ]
+            ]
+          },
+		  {
+            "WINDOW_ID": "06",
+            "WINDOW_FZSize": [
+              48,
+              16
+            ],
+            "WINDOW_Name": "高分可见通道4",
+            "WINDOW_Size": [
+              5168,
+              1000
+            ],
+            "WINDOW_SubRowAndColumn": [
+			  "1",
+			  "1"
+            ],
+            "WINDOW_SubWndCount": 2,
+            "WINDOW_SubWndNames": [
+              "全色谱段图像",
+			  "多光谱段图像"
+            ],
+            "WINDOW_SubWndSizes": [
+              [
+                5168,
+                600
+              ],
+			  [
+                5168,
+                200
+              ]
+            ]
+          }
+        ],
+        "rowAndColumnSize": [
+            2,
+            2
+        ]
+    }
+}

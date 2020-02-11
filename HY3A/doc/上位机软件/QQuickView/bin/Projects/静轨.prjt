@@ -1,0 +1,243 @@
+{
+   "ProjectName" : "静轨",
+   "DeviceType" : "Dalsa",
+   "DeviceIndex" : "0",
+   "CameraType" : "0",
+   "YkycPath":"ykyc_config/静轨",
+   "Driver":{
+		"Type" : "DALSA",
+		"CCFPath": "JingGui.ccf",
+		"OrigWidth" : 2064,
+		"OrigHeight" : 512,
+		"ImgWidth" : 2064,
+		"ImgHeight" : 512,
+		"PixelBytes" : 2,
+		"BufferCount" : 2,
+		"BufferCacheNum" : 5,
+		"PackageHeadLen" : 0,
+		"PackageTotalLen" : 1056768
+	},
+   "Model" : [
+        {
+			"Camera_ID": "JingGui",
+			"Camera_Analysis_ID": "0DFA",
+			"Camera_ID_Index": 0,
+			"Camera_ID_IndexLength": 2,
+			"Camera_Name": "静轨",
+			"Camera_AnalysisType": 1,
+			"Camera_Model":[
+				{
+					"Model_Name":"标准模式",
+				    "Model_length":2048
+				}
+			],
+			"Camera_RecvNothingTime": 2,
+            "One_Frame_LineCount": 512,
+			"One_Frame_LineLength": 2064,
+			"One_Frame_IncludeGraphicLines": 512,
+			"One_Line_FZ_Length": 14,
+			"One_FZ_Lines": 1,
+			"One_Line_GraphicLength": 2048,
+			"One_Pixel_Length": 2,
+			"Data_EndianFlag":0,
+			"Data_SkipBits":0,			
+			"Sensor_Lay": [2,1,2],
+			"Sensor_ID_Index": 0,
+			"Sensor_ID_IndexLength": 2,
+			"Sensor_Count": 6,
+			"Sensor_NumDiff": 0,
+			"Sensor_NamesAndSizes": 
+			[
+				{
+					"Sensor_ID": "JG_Sensor1",
+					"Sensor_Analysis_ID": "A501",
+					"Sensor_StartByte": 0,
+					"Sensor_Name": "B1视频处理器",
+					"Sensor_Width": 2048,
+					"Sensor_Height": 585,
+					"Sensor_FZ_Width": 0,
+					"Sensor_FZ_Height": 0,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "Sensor1_B1",
+							"Spectral_Name": "B1",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2048,
+							"Spectral_Height": 585
+						}
+					]
+				},
+				{
+					"Sensor_ID": "JG_Sensor2",
+					"Sensor_Analysis_ID": "A502",
+					"Sensor_StartByte": 0,
+					"Sensor_Name": "B2_1视频处理器",
+					"Sensor_Width": 2048,
+					"Sensor_Height": 828,
+					"Sensor_FZ_Width": 0,
+					"Sensor_FZ_Height": 0,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "Sensor2_B2_1",
+							"Spectral_Name": "B2_1",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2048,
+							"Spectral_Height": 828
+						}
+					]
+				},
+				{
+					"Sensor_ID": "JG_Sensor3",
+					"Sensor_Analysis_ID": "A503",
+					"Sensor_StartByte": 0,
+					"Sensor_Name": "B2_2视频处理器",
+					"Sensor_Width": 2048,
+					"Sensor_Height": 828,
+					"Sensor_FZ_Width": 0,
+					"Sensor_FZ_Height": 0,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "Sensor3_B2_2",
+							"Spectral_Name": "B2_2",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2048,
+							"Spectral_Height": 828
+						}
+					]
+				},
+				{
+					"Sensor_ID": "JG_Sensor4",
+					"Sensor_Analysis_ID": "04A5",
+					"Sensor_StartByte": 2,
+					"Sensor_Name": "B3视频处理器",
+					"Sensor_Width": 1024,
+					"Sensor_Height": 512,
+					"Sensor_FZ_Width": 0,
+					"Sensor_FZ_Height": 0,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "Sensor4_B3",
+							"Spectral_Name": "B3",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 1024,
+							"Spectral_Height": 512
+						}
+					]
+				},
+				{
+					"Sensor_ID": "JG_Sensor5",
+					"Sensor_Analysis_ID": "A505",
+					"Sensor_StartByte": 0,
+					"Sensor_Name": "B4视频处理器",
+					"Sensor_Width": 2048,
+					"Sensor_Height": 256,
+					"Sensor_FZ_Width": 0,
+					"Sensor_FZ_Height": 0,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "Sensor5_B4",
+							"Spectral_Name": "B4",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2048,
+							"Spectral_Height": 256
+						}
+					]
+				},
+				{
+					"Sensor_ID": "JG_Sensor6",
+					"Sensor_Analysis_ID": "A506",
+					"Sensor_StartByte": 0,
+					"Sensor_Name": "B5视频处理器",
+					"Sensor_Width": 1024,
+					"Sensor_Height": 256,
+					"Sensor_FZ_Width": 0,
+					"Sensor_FZ_Height": 0,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "Sensor6_B5",
+							"Spectral_Name": "B5",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 1024,
+							"Spectral_Height": 256
+						}
+					]
+				}
+			]					
+		}      
+   ],
+   "View" : {
+		"AppTitle" : "静轨图像采集软件",
+		"SubWindows" : [
+			{
+				"ID" : "Display_B1",
+				"Type" :"DisplayData",
+				"Title":"B1谱段",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"Sensor1_B1",
+				"Width":2048,
+				"Height":585
+			},
+			{
+				"ID" : "Display_B2_1",
+				"Type" :"DisplayData",
+				"Title":"B2_1谱段",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"Sensor2_B2_1",
+				"Width":2048,
+				"Height":828
+			},
+			{
+				"ID" : "Display_B2_2",
+				"Type" :"DisplayData",
+				"Title":"B2_2谱段",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"Sensor3_B2_2",
+				"Width":2048,
+				"Height":828
+			},
+			{
+				"ID" : "Display_B3",
+				"Type" :"DisplayData",
+				"Title":"B3谱段",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"Sensor4_B3",
+				"Width":2048,
+				"Height":256
+			},
+			{
+				"ID" : "Display_B4",
+				"Type" :"DisplayData",
+				"Title":"B4谱段",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"Sensor5_B4",
+				"Width":2048,
+				"Height":256
+			},
+			{
+				"ID" : "Display_B5",
+				"Type" :"DisplayData",
+				"Title":"B5谱段",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"Sensor6_B5",
+				"Width":1024,
+				"Height":256
+			},
+			{
+				"ID" : "Log",
+				"Type" :"Log",
+				"Title":"日志"
+			},
+			{
+				"ID" : "Assist",
+				"Type" :"AssistTable",
+				"Title":"辅助数据"
+			}
+		]
+	}
+}

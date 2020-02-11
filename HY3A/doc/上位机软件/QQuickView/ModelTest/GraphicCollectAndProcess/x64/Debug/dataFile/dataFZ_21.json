@@ -1,0 +1,186 @@
+[
+    [
+        "param_Name",
+        "param_Type",
+        "param_BelongGroup",
+        "param_StartBit",
+        "param_AnalysisBits"
+    ],
+    [
+        {
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "表头",
+            "param_Name": "分隔符",
+            "param_StartBit": 0,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "载荷标识",
+            "param_StartBit": 8,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "通道标识",
+            "param_StartBit": 10,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "普段标识",
+            "param_StartBit": 12,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "预留标识",
+            "param_StartBit": 14,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "行计数",
+            "param_StartBit": 16,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "帧计数",
+            "param_StartBit": 24,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "行同步对应内部时间计数",
+            "param_StartBit": 26,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 30,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "相机参数0-14",
+            "param_StartBit": 34,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 30,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "相机参数15-29",
+            "param_StartBit": 64,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 30,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "相机参数30-44",
+            "param_StartBit": 94,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 30,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "相机参数45-59",
+            "param_StartBit": 124,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 30,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "相机参数60-74",
+            "param_StartBit": 154,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 30,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "相机参数75-89",
+            "param_StartBit": 184,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 30,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "相机参数90-104",
+            "param_StartBit": 214,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W0~W19",
+            "param_StartBit": 244,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W20~W39",
+            "param_StartBit": 284,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W40~W59",
+            "param_StartBit": 324,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W60~W79",
+            "param_StartBit": 364,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W80~W99",
+            "param_StartBit": 404,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W100~W119",
+            "param_StartBit": 444,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W120~W139",
+            "param_StartBit": 484,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W140~W159",
+            "param_StartBit": 524,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W160~W179",
+            "param_StartBit": 564,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 40,
+            "param_BelongGroup": "高分中波辅助",
+            "param_Name": "卫星辅助数据W180~W199",
+            "param_StartBit": 604,
+            "param_Type": 1
+        }
+    ]
+]

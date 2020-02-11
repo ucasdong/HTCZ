@@ -1,0 +1,275 @@
+{
+	"1":
+	{
+		"oneScreenParams": 
+		[
+			{
+				"Camera_ID": "HY3",
+				"Camera_Analysis_ID": 250,
+				"Camera_ID_Index": 0,
+				"Camera_ID_IndexLength": 1,
+				"Camera_Name": "海洋3红外视频处理器",
+				"Camera_AnalysisType": 1,
+				"Camera_Model":[["海洋3标准模式",430]],				
+				"CCD_Lay": [2,1,2],
+				"CCD_ID_Index": 3,
+				"CCD_ID_IndexLength": 1,
+				"CCD_Count": 5,
+				"CCD_NumDiff": 0,
+				"CCD_NamesAndSizes": 
+				[
+					{
+					    "CCD_ID": "HY3_MFSTX",
+						"CCD_Analysis_ID": 56784,
+						"CCD_StartByte": 6020,
+						"CCD_Name": "漫反射图像",
+						"CCD_Width": 430,
+						"CCD_Height": 50,
+						"CCD_FZ_Width": 30,
+						"CCD_FZ_Height": 50,
+						"CCD_SpectralList":
+						[
+							{
+								"Spectral_ID": "MFSTX_B14",
+								"Spectral_Name": "B14",
+								"Spectral_StartBit": 0,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "MFSTX_B15",
+								"Spectral_Name": "B15",
+								"Spectral_StartBit": 80,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "MFSTX_B16",
+								"Spectral_Name": "B16",
+								"Spectral_StartBit": 160,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "MFSTX_B17",
+								"Spectral_Name": "B17",
+								"Spectral_StartBit": 240,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "MFSTX_B18",
+								"Spectral_Name": "B18",
+								"Spectral_StartBit": 320,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							}
+						]
+					},
+					{
+						"CCD_ID": "HY3_GWHTTX",
+						"CCD_Analysis_ID": 43680,
+						"CCD_StartByte": 27520,
+						"CCD_Name": "高温黑体图像",
+						"CCD_Width": 430,
+						"CCD_Height": 50,
+						"CCD_FZ_Width": 30,
+						"CCD_FZ_Height": 50,
+						"CCD_SpectralList":
+						[
+							{
+								"Spectral_ID": "GWHTTX_B14",
+								"Spectral_Name": "B14",
+								"Spectral_StartBit": 0,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "GWHTTX_B15",
+								"Spectral_Name": "B15",
+								"Spectral_StartBit": 80,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "GWHTTX_B16",
+								"Spectral_Name": "B16",
+								"Spectral_StartBit": 160,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "GWHTTX_B17",
+								"Spectral_Name": "B17",
+								"Spectral_StartBit": 240,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "GWHTTX_B18",
+								"Spectral_Name": "B18",
+								"Spectral_StartBit": 320,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							}
+						]
+					},
+					{
+						"CCD_ID": "HY3_DWTX",
+						"CCD_Analysis_ID": 61152,
+						"CCD_StartByte": 49020,
+						"CCD_Name": "地物图像",
+						"CCD_Width": 430,
+						"CCD_Height": 3320,
+						"CCD_FZ_Width": 30,
+						"CCD_FZ_Height": 50,
+						"CCD_SpectralList":
+						[
+							{
+								"Spectral_ID": "DWTX_B14",
+								"Spectral_Name": "B14",
+								"Spectral_StartBit": 0,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWTX_B15",
+								"Spectral_Name": "B15",
+								"Spectral_StartBit": 80,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWTX_B16",
+								"Spectral_Name": "B16",
+								"Spectral_StartBit": 160,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWTX_B17",
+								"Spectral_Name": "B17",
+								"Spectral_StartBit": 240,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWTX_B18",
+								"Spectral_Name": "B18",
+								"Spectral_StartBit": 320,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							}
+						]
+					},
+					{
+						"CCD_ID": "HY3_LKJTX",
+						"CCD_Analysis_ID": 52416,
+						"CCD_StartByte": 1476620,
+						"CCD_Name": "冷空间图像",
+						"CCD_Width": 430,
+						"CCD_Height": 50,
+						"CCD_FZ_Width": 30,
+						"CCD_FZ_Height": 50,
+						"CCD_SpectralList":
+						[
+							{
+								"Spectral_ID": "LKJTX_B14",
+								"Spectral_Name": "B14",
+								"Spectral_StartBit": 0,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "LKJTX_B15",
+								"Spectral_Name": "B15",
+								"Spectral_StartBit": 80,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "LKJTX_B16",
+								"Spectral_Name": "B16",
+								"Spectral_StartBit": 160,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "LKJTX_B17",
+								"Spectral_Name": "B17",
+								"Spectral_StartBit": 240,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "LKJTX_B18",
+								"Spectral_Name": "B18",
+								"Spectral_StartBit": 320,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							}
+						]
+					},
+					{
+					    "CCD_ID": "HY3_DWHTTX",
+						"CCD_Analysis_ID": 48048,
+						"CCD_StartByte": 1498120,
+						"CCD_Name": "低温黑体图像",
+						"CCD_Width": 430,
+						"CCD_Height": 50,
+						"CCD_FZ_Width": 30,
+						"CCD_FZ_Height": 50,
+						"CCD_SpectralList":
+						[
+							{
+								"Spectral_ID": "DWHTTX_B14",
+								"Spectral_Name": "B14",
+								"Spectral_StartBit": 0,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWHTTX_B15",
+								"Spectral_Name": "B15",
+								"Spectral_StartBit": 80,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWHTTX_B16",
+								"Spectral_Name": "B16",
+								"Spectral_StartBit": 160,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWHTTX_B17",
+								"Spectral_Name": "B17",
+								"Spectral_StartBit": 240,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							},
+							{
+								"Spectral_ID": "DWHTTX_B18",
+								"Spectral_Name": "B18",
+								"Spectral_StartBit": 320,							
+								"Spectral_Length": 80,
+								"Spectral_Width": 50
+							}
+						]
+					}
+				],
+				"One_Frame_LineCount": 3534,
+				"One_Frame_LineLength": 430,
+				"One_Frame_IncludeGraphicLines": 1,
+				"One_Line_FZ_Length": 430,
+				"One_FZ_Lines": 14,
+				"One_Line_GraphicLength": 430,
+				"One_Pixel_Length": 2,
+				"Data_EndianFlag":0,
+				"Data_SkipBits":0					
+			}
+        ],
+        "oneScreenLayout": [1,1]
+    }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "HY3_hongwai",
+  "yao_kong": {
+    "cmd_length": 10,
+    "cmd_header": "51082011",
+    "add_head": "10000B",
+    "add_tail": "000000"
+  },
+  "yao_kong_response": {
+    "response_length": 10,
+    "response_header": "5148",
+    "effective_start": 3
+  },
+  "shang_zhu": {
+    "cmd_length": 10,
+    "cmd_header": "4E08200F"
+  },
+  "shang_zhu_response": {
+    "response_length": 10,
+    "response_header": "4E48"
+  },
+  "yao_ce": {
+    "data_length": 39,
+    "data_header": "4300"
+  },
+  "shang_zhu_yao_ce": {
+    "data_length": 40,
+    "data_header": "4200"
+  },
+  "serial_port_to_can": {
+    "yao_kong": {
+      "add_head": "10000A00",
+      "add_tail": "0000"
+    }
+  },
+  "can_to_serial_port": {
+    "response_head": "4000",
+    "telemetry_head": "4300"
+  }
+}

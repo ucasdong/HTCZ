@@ -1,0 +1,326 @@
+[
+    [
+        "param_Name",
+        "param_Type",
+        "param_BelongGroup",
+        "param_StartBit",
+        "param_AnalysisBits"
+    ],
+    [
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W0~W6",
+            "param_StartBit": 0,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W7~W13",
+            "param_StartBit": 14,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W14~W20",
+            "param_StartBit": 28,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W21~W27",
+            "param_StartBit": 42,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W28~W34",
+            "param_StartBit": 56,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W35~W41",
+            "param_StartBit": 70,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W42~W48",
+            "param_StartBit": 84,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W49~W55",
+            "param_StartBit": 98,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W56~W62",
+            "param_StartBit": 112,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W63~W69",
+            "param_StartBit": 126,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W70~W76",
+            "param_StartBit": 140,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W77~W83",
+            "param_StartBit": 154,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W84~W90",
+            "param_StartBit": 168,
+            "param_Type": 1
+        },
+		 {
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W91~W97",
+            "param_StartBit": 182,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W98~W104",
+            "param_StartBit": 196,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W105~W111",
+            "param_StartBit": 210,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W112~W118",
+            "param_StartBit": 224,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星姿态数据",
+            "param_Name": "卫星姿态数据W119~W127",
+            "param_StartBit": 238,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星定位数据",
+            "param_Name": "卫星定位数据W0~W4",
+            "param_StartBit": 252,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星定位数据",
+            "param_Name": "卫星定位数据W5~W11",
+            "param_StartBit": 266,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星定位数据",
+            "param_Name": "卫星定位数据W12~W18",
+            "param_StartBit": 280,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "卫星定位数据",
+            "param_Name": "卫星定位数据W19~W25",
+            "param_StartBit": 294,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "卫星定位数据",
+            "param_Name": "卫星定位数据W26~W33",
+            "param_StartBit": 308,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "备用6",
+            "param_Name": "备用6",
+            "param_StartBit": 324,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "备用7",
+            "param_Name": "备用7_1",
+            "param_StartBit": 336,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "备用7",
+            "param_Name": "备用7_2",
+            "param_StartBit": 350,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "备用7",
+            "param_Name": "备用7_3",
+            "param_StartBit": 364,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "备用7",
+            "param_Name": "备用7_4",
+            "param_StartBit": 378,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 14,
+            "param_BelongGroup": "备用7",
+            "param_Name": "备用7_5",
+            "param_StartBit": 392,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "前视调焦",
+            "param_Name": "前视1-2调焦",
+            "param_StartBit": 406,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "后视调焦",
+            "param_Name": "后视1-2调焦",
+            "param_StartBit": 420,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "开始成像时间码",
+            "param_Name": "开始成像时间码W0~W5",
+            "param_StartBit": 434,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "整秒时刻",
+            "param_Name": "GPS整秒时刻W0~W3",
+            "param_StartBit": 448,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "GPS对应时间计数",
+            "param_Name": "GPS对应时间计数W0~W3",
+            "param_StartBit": 462,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "增益",
+            "param_Name": "B1-B2-B3增益W0W1",
+            "param_StartBit": 476,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "增益",
+            "param_Name": "B4-B5增益W0W1",
+            "param_StartBit": 490,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "算法开关状态",
+            "param_Name": "算法开关状态",
+            "param_StartBit": 498,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 10,
+            "param_BelongGroup": "B1-B2-B3-B4-B5级数",
+            "param_Name": "B1-B2-B3-B4-B5级数W0~W4",
+            "param_StartBit": 504,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 4,
+            "param_BelongGroup": "积分时间代码",
+            "param_Name": "积分时间代码W0W1",
+            "param_StartBit": 514,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "B1-B2-B3KB参数",
+            "param_Name": "B1-B2-B3KB参数W0W1",
+            "param_StartBit": 518,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "B4-B5KB参数",
+            "param_Name": "B4-B5KB参数W0W1",
+            "param_StartBit": 532,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "B1-B2-B3暗像元L均值",
+            "param_Name": "B1-B2-B3暗像元L均值W0W1",
+            "param_StartBit": 546,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "B4-B5暗像元L均值",
+            "param_Name": "B4-B5暗像元L均值W0W1",
+            "param_StartBit": 560,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 12,
+            "param_BelongGroup": "B1-B2-B3暗像元R均值",
+            "param_Name": "B1-B2-B3暗像元R均值W0W1",
+            "param_StartBit": 574,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "B4-B5暗像元R均值W0W1",
+            "param_StartBit": 588,
+            "param_Type": 1
+        }
+    ]
+]

@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="GraphicCollectAndProcess">
+      <file>image/down-a.png</file>
+      <file>image/up-a.png</file>
+      <file>image/close.png</file>
+      <file>image/max.png</file>
+      <file>image/min.png</file>
+      <file>image/close_hover.png</file>
+      <file>image/min_hover.png</file>
+      <file>image/max_hover.png</file>
+      <file>image/scroll_down.png</file>
+      <file>image/scroll_up.png</file>
+      <file>image/scroll_left.png</file>
+      <file>image/scroll_right.png</file>
+      <file>image/camera-blue.png</file>
+      <file>image/splash.png</file>
+      <file>image/setting.png</file>
+      <file>image/replay.png</file>
+      <file>image/table.png</file>
+      <file>image/showSetting.png</file>
+      <file>image/startCollect.png</file>
+      <file>image/stopCollect.png</file>
+      <file>image/picture.png</file>
+      <file>image/table_rightkey.png</file>
+      <file>image/line.png</file>
+      <file>image/ycyk.png</file>
+      <file>image/splash_old.png</file>
+    </qresource>
+</RCC>

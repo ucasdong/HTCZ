@@ -1,0 +1,254 @@
+QMainWindow,QWidget
+{
+    background-color: rgba(26, 48, 80, 255);
+	border: 0px;
+}
+
+QWidget#topWidget,#label
+{
+    background-color: rgba(13, 24, 40, 255);
+	border: 0px;
+}
+/*
+QWidget#widget,#widget_2
+{
+    background-color: rgba(20, 20, 20, 255);
+	border: 0px;
+}
+*/
+QScrollArea
+{
+    background-color: rgba(20, 20, 20, 255);
+	border: 2px;
+}
+
+QLabel
+{
+    color:white;
+    background-color: rgba(26, 48, 80, 255);
+    border-color: rgba(26, 48, 80, 255);
+
+}
+
+QLabel#label_Pic
+{
+    background-color: rgba(13, 24, 40, 255);
+    border-image: url(:/GraphicCollectAndProcess/image/camera-blue.png);
+
+}
+
+QPushButton#minButton
+{
+    background-color: rgba(13, 24, 40, 255);
+	border-image: url(:/GraphicCollectAndProcess/image/min.png);
+}
+
+QPushButton#minButton:hover
+{
+    background-color: rgba(26, 48, 80, 255);
+	border-image: url(:/GraphicCollectAndProcess/image/min_hover.png);
+}
+
+QPushButton#maxButton
+{
+    background-color: rgba(13, 24, 40, 255);
+	border-image: url(:/GraphicCollectAndProcess/image/max.png);
+}
+
+QPushButton#maxButton:hover
+{
+    background-color: rgba(26, 48, 80, 255);
+	border-image: url(:/GraphicCollectAndProcess/image/max_hover.png);
+}
+
+QPushButton#closeButton
+{
+    background-color: rgba(13, 24, 40, 255);
+	border-image: url(:/GraphicCollectAndProcess/image/close.png);
+}
+
+QPushButton#closeButton:hover
+{
+    background-color: rgba(26, 48, 80, 255);
+	border-image: url(:/GraphicCollectAndProcess/image/close_hover.png);
+}
+
+QPushButton
+{
+	background-color: #1DB0E0;
+	border-radius: 3px;
+	padding:1px;
+	color:white;
+}
+
+QPushButton:hover
+{
+	background-color:#2ECBFF; 
+	color: white;
+}
+
+
+QWidget#ToolWidget
+{
+    background-color: rgba(45, 84, 138, 200);
+	border: 0px;
+}
+
+QToolButton[enabled=true]
+{
+    color:white;
+    background-color: rgba(45, 84, 138, 200);
+    border-color: rgba(45, 84, 138, 200);
+	border-radius: 1px;
+}
+
+QToolButton[enabled=false]
+{
+    color:white;
+    background-color: rgba(45, 84, 138, 200);
+    border-color: rgba(45, 84, 138, 200);
+	border-radius: 1px;
+}
+
+QToolButton:hover
+{
+	border-radius:4px;
+	background-color: rgba(48, 68, 88, 255);
+	border: 1px solid QColor(200, 200, 200); 
+	background-color: transparent
+}
+	
+QComboBox 
+{
+	color:white;
+    border: 1px solid gray;
+    border-radius: 1px;
+    padding: 1px 0px 1px 0px;
+	background-color:#304458;
+}
+
+QComboBox::drop-down 
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+ 
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox QAbstractItemView 
+{
+    color:rgba(220, 220, 220, 200);
+    background-color:#304458;
+	selection-background-color: #1DB0E0;
+}
+
+QComboBox::down-arrow 
+{
+    image: url(:/GraphicCollectAndProcess/image/down-a.png);
+}
+
+QGroupBox
+{
+	font: bold;
+    color:white;
+	font-size:14px;
+	border: 2px solid gray;
+	border-color:white;
+}	
+
+QLineEdit
+{
+	color:rgba(220, 220, 220, 200);
+    background-color:#304458;
+	border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+	/* border-top-left-radius: 3px; 
+     border-bottom-left-radius: 3px;
+     border-top-right-radius: 3px; 
+     border-bottom-right-radius: 3px;*/
+}
+
+QTableWidget                   
+{          
+    border:2px;                  
+    font-size:12px;    
+    gridline-color: white;	
+    font-family:"Microsoft YaHei"; 
+    color:rgba(220, 220, 220, 200);              
+    background-color: rgba(26, 48, 80, 255);
+}
+
+QScrollBar::down-arrow:vertical 
+{
+    border-image: url(:/GraphicCollectAndProcess/image/scroll_down.png);
+	border-color: rgba(150, 150, 150, 200);
+	border:1px;
+}
+
+QScrollBar::up-arrow:vertical 
+{
+    border-image: url(:/GraphicCollectAndProcess/image/scroll_up.png);
+	border-color: rgba(150, 150, 150, 200);
+	border:1px;
+}
+
+QScrollBar::left-arrow:horizontal 
+{
+    border-image: url(:/GraphicCollectAndProcess/image/scroll_left.png);
+	border-color: rgba(150, 150, 150, 200);
+	border:1px;
+}
+
+QScrollBar::right-arrow:horizontal 
+{
+    border-image: url(:/GraphicCollectAndProcess/image/scroll_right.png);
+	border-color: rgba(150, 150, 150, 200);
+	border:1px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal 
+{
+     background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical 
+{
+     background: none;
+}
+
+QScrollBar::horizontal 
+{
+    background-color: rgba(13, 24, 40, 255);
+	height:18px;
+	padding-left:18px;
+	padding-right:18px;
+}
+
+QScrollBar::handle:horizontal 
+{
+	background-color:rgba(45, 84, 138, 200); 
+	border:2px solid transparent;
+	border-radius:5px;
+	min-width:18px;
+}
+
+QScrollBar::vertical 
+{
+    background-color: rgba(13, 24, 40, 255);
+	width:18px;
+	padding-top:18px;
+	padding-bottom:18px;
+}
+
+QScrollBar::handle:vertical 
+{
+    background-color:rgba(45, 84, 138, 200); 
+	border:2px solid transparent;
+	border-radius:5px;
+	min-height:18px;
+}

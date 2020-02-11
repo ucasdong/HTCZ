@@ -1,0 +1,297 @@
+{
+   "ProjectName" : "高轨海洋",
+   "DeviceType" : "Dalsa",
+   "DeviceIndex" : "0",
+   "CameraType" : "0",
+   "YkycPath":"ykyc_config/高轨海洋",
+   "Driver":{
+		"Type" : "DALSA",
+		"CCFPath": "GaoGuiHaiYang.ccf",
+		"OrigWidth" : 2052,
+		"OrigHeight" : 51382,
+		"ImgWidth" : 2052,
+		"ImgHeight" : 51382,
+		"PixelBytes" : 2,
+		"BufferCount" : 2,
+		"BufferCacheNum" : 5,
+		"PackageHeadLen" : 0,
+		"PackageTotalLen" : 105435864
+	},
+   "Model" : [
+        {
+			"Camera_ID": "GaoGuiHaiYang",
+			"Camera_Analysis_ID": "6E",
+			"Camera_ID_Index": 0,
+			"Camera_ID_IndexLength": 1,
+			"Camera_Name": "高轨海洋",
+			"Camera_AnalysisType": 2,
+			"Camera_Model":[
+				{
+					"Model_Name":"标准模式",
+				    "Model_length":2052
+				}
+			],
+			"Camera_RecvNothingTime": 2,
+            "One_Frame_LineCount": 205528,
+			"One_Frame_LineLength": 2052,
+			"One_Frame_IncludeGraphicLines": 205528,
+			"One_Line_FZ_Length": 2052,
+			"One_FZ_Lines": 1,
+			"One_Line_GraphicLength": 2052,
+			"One_Pixel_Length": 2,
+			"Data_EndianFlag":0,
+			"Data_SkipBits":0,			
+			"Sensor_Lay": [2,2],
+			"Sensor_ID_Index": 0,
+			"Sensor_ID_IndexLength": 2,
+			"Sensor_Count": 4,
+			"Sensor_NumDiff": 0,
+			"Sensor_NamesAndSizes": 
+			[
+				{
+					"Sensor_ID": "CMOS1",
+					"Sensor_Analysis_ID": "01",
+					"Sensor_StartByte": 35,
+					"Sensor_Name": "CMOS1",
+					"Sensor_Width": 2052,
+					"Sensor_Height": 51382,
+					"Sensor_FZ_Width": 2052,
+					"Sensor_FZ_Height": 1,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "CMOS1_H1",
+							"Spectral_Name": "H1",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS1_H2",
+							"Spectral_Name": "H2",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS1_H3",
+							"Spectral_Name": "H3",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS1_H4",
+							"Spectral_Name": "H4",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS1_H5",
+							"Spectral_Name": "H5",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						}
+					]
+				},
+				{
+					"Sensor_ID": "CMOS2",
+					"Sensor_Analysis_ID": "02",
+					"Sensor_StartByte": 35,
+					"Sensor_Name": "CMOS2",
+					"Sensor_Width": 2052,
+					"Sensor_Height": 51382,
+					"Sensor_FZ_Width": 2052,
+					"Sensor_FZ_Height": 1,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "CMOS2_H1",
+							"Spectral_Name": "H1",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS2_H2",
+							"Spectral_Name": "H2",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS2_H3",
+							"Spectral_Name": "H3",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS2_H4",
+							"Spectral_Name": "H4",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS2_H5",
+							"Spectral_Name": "H5",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						}
+					]
+				},
+				{
+					"Sensor_ID": "CMOS3",
+					"Sensor_Analysis_ID": "03",
+					"Sensor_StartByte": 35,
+					"Sensor_Name": "CMOS3",
+					"Sensor_Width": 2052,
+					"Sensor_Height": 51382,
+					"Sensor_FZ_Width": 2052,
+					"Sensor_FZ_Height": 1,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "CMOS3_H1",
+							"Spectral_Name": "H1",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS3_H2",
+							"Spectral_Name": "H2",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS3_H3",
+							"Spectral_Name": "H3",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS3_H4",
+							"Spectral_Name": "H4",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS3_H5",
+							"Spectral_Name": "H5",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						}
+					]
+				},
+				{
+					"Sensor_ID": "CMOS4",
+					"Sensor_Analysis_ID": "04",
+					"Sensor_StartByte": 35,
+					"Sensor_Name": "CMOS4",
+					"Sensor_Width": 2052,
+					"Sensor_Height": 51382,
+					"Sensor_FZ_Width": 2052,
+					"Sensor_FZ_Height": 1,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "CMOS4_H1",
+							"Spectral_Name": "H1",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS4_H2",
+							"Spectral_Name": "H2",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS4_H3",
+							"Spectral_Name": "H3",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS4_H4",
+							"Spectral_Name": "H4",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						},
+						{
+							"Spectral_ID": "CMOS4_H5",
+							"Spectral_Name": "H5",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 2052,
+							"Spectral_Height": 10272
+						}
+					]
+				}		
+			]					
+		}      
+   ],
+   "View" : {
+		"AppTitle" : "高轨海洋图像采集软件",
+		"SubWindows" : [
+			{
+				"ID" : "CMOS1",
+				"Type" :"DisplayData",
+				"Title":"CMOS1",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"CMOS1",
+				"Width":2052,
+				"Height":51382
+			},
+			{
+				"ID" : "CMOS2",
+				"Type" :"DisplayData",
+				"Title":"CMOS2",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"CMOS2",
+				"Width":2052,
+				"Height":51382
+			},
+			{
+				"ID" : "CMOS3",
+				"Type" :"DisplayData",
+				"Title":"CMOS3",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"CMOS3",
+				"Width":2052,
+				"Height":51382
+			},
+			{
+				"ID" : "CMOS4",
+				"Type" :"DisplayData",
+				"Title":"CMOS4",
+				"DataSourceType":"Spectral",
+				"DataSourceID":"CMOS4",
+				"Width":2052,
+				"Height":51382
+			},
+			{
+				"ID" : "Log",
+				"Type" :"Log",
+				"Title":"日志"
+			},
+			{
+				"ID" : "Assist",
+				"Type" :"AssistTable",
+				"Title":"辅助数据"
+			}
+		]
+	}
+}

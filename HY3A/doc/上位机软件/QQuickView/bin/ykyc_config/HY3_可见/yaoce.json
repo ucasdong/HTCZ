@@ -1,0 +1,560 @@
+[
+    {
+        "group_name": "内部二级总线遥测",
+		"group_size": 144,
+        "group_member": [
+            {
+                "param_Name": "遥测标识头",
+                "param_Type": 1,
+                "param_StartBit": 0,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频二级CAN总线使用状态",
+                "param_Type": 1,
+                "param_StartBit": 1,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频二级CAN总线复位计数",
+                "param_Type": 1,
+                "param_StartBit": 2,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频CAN总线重新初始化计数",
+                "param_Type": 1,
+                "param_StartBit": 3,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频CAN总线数据格式错误计数",
+                "param_Type": 1,
+                "param_StartBit": 4,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频最新接收总线命令标识",
+                "param_Type": 1,
+                "param_StartBit": 5,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频处理电路正确指令计数",
+                "param_Type": 1,
+                "param_StartBit": 6,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频错误指令计数",
+                "param_Type": 1,
+                "param_StartBit": 7,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频处理电路执行指令计数",
+                "param_Type": 1,
+                "param_StartBit": 8,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见行周期",
+                "param_Type": 1,
+                "param_StartBit": 9,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "紫外可见B1级数",
+                "param_Type": 1,
+                "param_StartBit": 11,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见B2级数",
+                "param_Type": 1,
+                "param_StartBit": 12,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见B3级数",
+                "param_Type": 1,
+                "param_StartBit": 13,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见B4级数",
+                "param_Type": 1,
+                "param_StartBit": 14,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见B5级数",
+                "param_Type": 1,
+                "param_StartBit": 15,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见B6级数",
+                "param_Type": 1,
+                "param_StartBit": 16,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见B7级数",
+                "param_Type": 1,
+                "param_StartBit": 17,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "紫外可见B8级数",
+                "param_Type": 1,
+                "param_StartBit": 18,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见近红外行周期",
+                "param_Type": 1,
+                "param_StartBit": 19,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "可见近红外B9级数",
+                "param_Type": 1,
+                "param_StartBit": 21,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见近红外B10级数",
+                "param_Type": 1,
+                "param_StartBit": 22,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见近红外B11级数",
+                "param_Type": 1,
+                "param_StartBit": 23,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见近红外B12级数",
+                "param_Type": 1,
+                "param_StartBit": 24,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见近红外B13级数",
+                "param_Type": 1,
+                "param_StartBit": 25,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频处理器算法开关",
+                "param_Type": 1,
+                "param_StartBit": 26,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频处理器数据传输开关",
+                "param_Type": 1,
+                "param_StartBit": 27,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见成像触发模式",
+                "param_Type": 1,
+                "param_StartBit": 28,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频上注准备状态",
+                "param_Type": 1,
+                "param_StartBit": 29,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频上注状态",
+                "param_Type": 1,
+                "param_StartBit": 30,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频接收上注数据包标识",
+                "param_Type": 1,
+                "param_StartBit": 31,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频上注数据包正确计数",
+                "param_Type": 1,
+                "param_StartBit": 32,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "可见视频上注数据包错误计数\t",
+                "param_Type": 1,
+                "param_StartBit": 34,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "可见视频首个上注校验错包地址",
+                "param_Type": 1,
+                "param_StartBit": 36,
+                "param_AnalysisBits": 4
+            },
+            {
+                "param_Name": "扫描成像脉冲1（起始脉冲）",
+                "param_Type": 1,
+                "param_StartBit": 40,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "扫描成像脉冲2（角度脉冲）",
+                "param_Type": 1,
+                "param_StartBit": 41,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "预留",
+                "param_Type": 1,
+                "param_StartBit": 42,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "预留",
+                "param_Type": 1,
+                "param_StartBit": 43,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "预留",
+                "param_Type": 1,
+                "param_StartBit": 44,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "预留",
+                "param_Type": 1,
+                "param_StartBit": 45,
+                "param_AnalysisBits": 1
+            }
+        ]
+    },
+    {
+        "group_name": "缓变遥测",
+		"group_size": 432,
+        "group_member": [
+            {
+                "param_Name": "缓变01包",
+                "param_Type": 1,
+                "param_StartBit": 0,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "成像任务模式",
+                "param_Type": 1,
+                "param_StartBit": 1,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "备用",
+                "param_Type": 1,
+                "param_StartBit": 2,
+                "param_AnalysisBits": 3
+            },
+            {
+                "param_Name": "算法开关状态",
+                "param_Type": 1,
+                "param_StartBit": 5,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "电路状态信息(高字节)",
+                "param_Type": 1,
+                "param_StartBit": 6,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "电路状态信息(低字节)",
+                "param_Type": 1,
+                "param_StartBit": 7,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "自测试指令状态",
+                "param_Type": 1,
+                "param_StartBit": 8,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B1曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 9,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B2曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 10,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B3曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 11,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B4曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 12,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B5曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 13,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B6曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 14,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B7曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 15,
+                "param_AnalysisBits": 1
+            },
+			{
+                "param_Name": "B8曝光时间代码",
+                "param_Type": 1,
+                "param_StartBit": 16,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "W17_1",
+                "param_Type": 1,
+                "param_StartBit": 17,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "缓变02包",
+                "param_Type": 1,
+                "param_StartBit": 18,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B1谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 19,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B2谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 21,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B3谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 23,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B4谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 25,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B5谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 27,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B6谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 29,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B7谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 31,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B8谱段增益代码",
+                "param_Type": 1,
+                "param_StartBit": 33,
+                "param_AnalysisBits": 3
+            },
+            {
+                "param_Name": "缓变03包",
+                "param_Type": 1,
+                "param_StartBit": 36,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "B1谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 37,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B2谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 39,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B3谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 41,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B4谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 43,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B5谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 45,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B6谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 47,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B7谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 49,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "B8谱段箝位状态",
+                "param_Type": 1,
+                "param_StartBit": 51,
+                "param_AnalysisBits": 3
+            }			
+        ]
+    },
+    {
+        "group_name": "上注状态遥测",
+		"group_size": 100,
+        "group_member": [
+            {
+                "param_Name": "可见视频（程序上注）二级CAN总线使用状态",
+                "param_Type": 1,
+                "param_StartBit": 0,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）二级CAN总线复位计数",
+                "param_Type": 1,
+                "param_StartBit": 1,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）CAN总线重新初始化计数",
+                "param_Type": 1,
+                "param_StartBit": 2,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）CAN总线数据格式错误计数",
+                "param_Type": 1,
+                "param_StartBit": 3,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）最新接收总线命令标识",
+                "param_Type": 1,
+                "param_StartBit": 4,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）正确指令计数",
+                "param_Type": 1,
+                "param_StartBit": 5,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "可见视频（程序上注）错误指令计数",
+                "param_Type": 1,
+                "param_StartBit": 7,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "可见视频（程序上注）执行指令计数",
+                "param_Type": 1,
+                "param_StartBit": 9,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）已正确接收数据包序号",
+                "param_Type": 1,
+                "param_StartBit": 10,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "可见视频（程序上注）刷新次数计数",
+                "param_Type": 1,
+                "param_StartBit": 12,
+                "param_AnalysisBits": 2
+            },
+            {
+                "param_Name": "可见视频（程序上注）上注程序版本号",
+                "param_Type": 1,
+                "param_StartBit": 14,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）程序校验状态",
+                "param_Type": 1,
+                "param_StartBit": 15,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）程序校验状态",
+                "param_Type": 1,
+                "param_StartBit": 16,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）运行状态遥测",
+                "param_Type": 1,
+                "param_StartBit": 17,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）程序写入擦除状态",
+                "param_Type": 1,
+                "param_StartBit": 18,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "可见视频（程序上注）工作状态",
+                "param_Type": 1,
+                "param_StartBit": 19,
+                "param_AnalysisBits": 1
+            },
+            {
+                "param_Name": "（程序上注）预留",
+                "param_Type": 1,
+                "param_StartBit": 20,
+                "param_AnalysisBits": 4
+            }
+        ]
+    }
+]

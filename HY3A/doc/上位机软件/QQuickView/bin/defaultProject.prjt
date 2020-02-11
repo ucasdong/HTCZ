@@ -1,0 +1,317 @@
+{
+   "ProjectName" : "高轨海洋",
+   "DeviceType" : "Dalsa",
+   "DeviceIndex" : "0",
+   "CameraType" : "0",
+   "YkycPath":"ykyc_config/HY3_可见",
+   "Driver":{
+		"Type" : "DALSA",
+		"CCFPath": "HY3.ccf",
+		"OrigWidth" : 2304,
+		"OrigHeight" : 3534,
+		"ImgWidth" : 2304,
+		"ImgHeight" : 3534,
+		"PixelBytes" : 2,
+		"BufferCount" : 2,
+		"BufferCacheNum" : 5,
+		"PackageHeadLen" : 0,
+		"PackageTotalLen" : 8142336
+	},
+   "Model" : [
+        {
+			"Camera_ID": "HY3",
+			"Camera_Analysis_ID": "FA",
+			"Camera_ID_Index": 0,
+			"Camera_ID_IndexLength": 1,
+			"Camera_Name": "海洋3可见视频处理器",
+			"Camera_AnalysisType": 1,
+			"Camera_Model":[
+				{
+					"Model_Name":"海洋3标准模式",
+				    "Model_length":430
+				}
+			],					
+			"CCD_Lay": [2,1,2],
+			"CCD_ID_Index": 3,
+			"CCD_ID_IndexLength": 2,
+			"CCD_Count": 5,
+			"CCD_NumDiff": 0,
+			"CCD_NamesAndSizes": 
+			[
+				{
+					"CCD_ID": "HY3_MFSTX",
+					"CCD_Analysis_ID": "AAA0",
+					"CCD_StartByte": 4608,
+					"CCD_Name": "漫反射图像",
+					"CCD_Width": 1152,
+					"CCD_Height": 50,
+					"CCD_FZ_Width": 30,
+					"CCD_FZ_Height": 50,
+					"CCD_SpectralList":
+					[
+						{
+							"Spectral_ID": "MFSTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 80,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 160,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 240,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 320,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"CCD_ID": "HY3_GWHTTX",
+					"CCD_Analysis_ID": "BBB0",
+					"CCD_StartByte": 66816,
+					"CCD_Name": "高温黑体图像",
+					"CCD_Width": 1152,
+					"CCD_Height": 50,
+					"CCD_FZ_Width": 30,
+					"CCD_FZ_Height": 50,
+					"CCD_SpectralList":
+					[
+						{
+							"Spectral_ID": "GWHTTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 80,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 160,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 240,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 320,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"CCD_ID": "HY3_DWTX",
+					"CCD_Analysis_ID": "CCC0",
+					"CCD_StartByte": 124416,
+					"CCD_Name": "地物图像",
+					"CCD_Width": 1152,
+					"CCD_Height": 3320,
+					"CCD_FZ_Width": 30,
+					"CCD_FZ_Height": 50,
+					"CCD_SpectralList":
+					[
+						{
+							"Spectral_ID": "DWTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 80,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 160,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 240,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 320,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"CCD_ID": "HY3_LKJTX",
+					"CCD_Analysis_ID": "DDD0",
+					"CCD_StartByte": 3949056,
+					"CCD_Name": "冷空间图像",
+					"CCD_Width": 1152,
+					"CCD_Height": 50,
+					"CCD_FZ_Width": 30,
+					"CCD_FZ_Height": 50,
+					"CCD_SpectralList":
+					[
+						{
+							"Spectral_ID": "LKJTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 80,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 160,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 240,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 320,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"CCD_ID": "HY3_DWHTTX",
+					"CCD_Analysis_ID": "EEE0",
+					"CCD_StartByte": 4006656,
+					"CCD_Name": "低温黑体图像",
+					"CCD_Width": 1152,
+					"CCD_Height": 50,
+					"CCD_FZ_Width": 30,
+					"CCD_FZ_Height": 50,
+					"CCD_SpectralList":
+					[
+						{
+							"Spectral_ID": "DWHTTX_B14",
+							"Spectral_Name": "B14",
+							"Spectral_StartByte": 0,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B15",
+							"Spectral_Name": "B15",
+							"Spectral_StartByte": 80,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B16",
+							"Spectral_Name": "B16",
+							"Spectral_StartByte": 160,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B17",
+							"Spectral_Name": "B17",
+							"Spectral_StartByte": 240,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B18",
+							"Spectral_Name": "B18",
+							"Spectral_StartByte": 320,							
+							"Spectral_Width": 80,
+							"Spectral_Height": 50
+						}
+					]
+				}
+			],
+			"One_Frame_LineCount": 3534,
+			"One_Frame_LineLength": 1152,
+			"One_Frame_IncludeGraphicLines": 1,
+			"One_Line_FZ_Length": 430,
+			"One_FZ_Lines": 14,
+			"One_Line_GraphicLength": 1152,
+			"One_Pixel_Length": 2,
+			"Data_EndianFlag":0,
+			"Data_SkipBits":0					
+		}      
+   ],
+   "View" : {
+		"AppTitle" : "可见视频处理器图像采集软件",
+		"SubWindows" : [
+			{
+				"ID" : "Display-Camera",
+				"Type" :"DisplayData",
+				"Title":"探测器1",
+				"DataSourceType":"Camera",
+				"DataSourceID":"HY3",
+				"Width":1152,
+				"Height":3534
+			},
+			{
+				"ID" : "Log",
+				"Type" :"Log",
+				"Title":"日志"
+			},
+			{
+				"ID" : "Assist",
+				"Type" :"AssistTable",
+				"Title":"辅助数据"
+			}
+		]
+	}
+}

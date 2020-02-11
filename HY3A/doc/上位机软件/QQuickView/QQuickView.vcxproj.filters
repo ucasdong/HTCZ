@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{ecbcac8d-e198-49dd-8aab-a21a820090a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Header Files">
+      <UniqueIdentifier>{340ac3cb-722c-46c1-aaa5-3227e7d2311e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Source Files">
+      <UniqueIdentifier>{201db887-17f4-4085-a2e1-b61610362177}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{237f05cb-4b4e-47cd-b33e-4a5d60800bd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Header Files">
+      <UniqueIdentifier>{66031397-7fe7-43eb-90f4-5aac1bb5cf3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model\Source Files">
+      <UniqueIdentifier>{3e21f7d6-d0a2-48f9-9159-2fcf1348aab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{19a619ff-bb67-4b7e-82f4-6121d848991c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\ykyc">
+      <UniqueIdentifier>{c3fc3f47-294d-4825-81cf-414095dcebe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver">
+      <UniqueIdentifier>{ecc60040-ce97-4866-9f15-db4ba7360aca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QQuickView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\MainWindow.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QtDockTitleBar.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IBussiness.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\PixItem.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QBaseDispalyStrategy.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QDisplayDockWidget.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QImageView.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QCToolBar.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QDisplayDataModel.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\AnalysisModel.cpp">
+      <Filter>Model\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\DataAnalysisModel.cpp">
+      <Filter>Model\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\CommonHeader.cpp">
+      <Filter>Include</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\GrabImageData.cpp">
+      <Filter>Model\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QImageViewWorker.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\themewidget.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Callout.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ykyc\CDlgComm.cpp">
+      <Filter>View\ykyc</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ykyc\Common.cpp">
+      <Filter>View\ykyc</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ykyc\ConfigIni.cpp">
+      <Filter>View\ykyc</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ykyc\SerialPortClass.cpp">
+      <Filter>View\ykyc</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ykyc\broadcast\DataBlockBroadcast.cpp">
+      <Filter>View\ykyc</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QBackRuleGraphicsItem.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\rulebar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\SaveData.cpp">
+      <Filter>Model\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QImageCallout.cpp">
+      <Filter>View\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\driver\C1500Driver.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\factory\C1500Factory.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\driver\CDALSADriver.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\factory\CDALSAFactory.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\interface\CDataTransmission.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\interface\CDriverData.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\interface\CDriverOperator.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\common\CIniReader.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\common\CIniWriter.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\common\cJSON.cpp">
+      <Filter>Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QSaveDataConfigDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ykyc\BroadcastSetWidget.cpp">
+      <Filter>View\ykyc</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ykyc\SerialPortShowWidget.cpp">
+      <Filter>View\ykyc</Filter>
+    </ClCompile>
+    <ClCompile Include="MTF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\assistdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\assistform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\AssistPicDataModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\PayloadParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\QCommonDockWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\BottomWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ReplayListFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\WordEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\HealthyForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\StaticCheckWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\ccheckcombox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QQuickView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\MainWindow.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\QtDockTitleBar.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QBaseDispalyStrategy.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\QDisplayDockWidget.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\QCToolBar.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\QImageView.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\AnalysisModel.h">
+      <Filter>Model\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\DataAnalysisModel.h">
+      <Filter>Model\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Include\CommonHeader.h">
+      <Filter>Include</Filter>
+    </QtMoc>
+    <QtMoc Include="IBussiness.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\GrabImageData.h">
+      <Filter>Model\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\QImageViewWorker.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\themewidget.h">
+      <Filter>View\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ykyc\CDlgComm.h">
+      <Filter>View\ykyc</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ykyc\Common.h">
+      <Filter>View\ykyc</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ykyc\ConfigIni.h">
+      <Filter>View\ykyc</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ykyc\SerialPortClass.h">
+      <Filter>View\ykyc</Filter>
+    </QtMoc>
+    <QtMoc Include="View\rulebar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model\SaveData.h">
+      <Filter>Model\Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\QSaveDataConfigDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ykyc\BroadcastSetWidget.h">
+      <Filter>View\ykyc</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ykyc\SerialPortShowWidget.h">
+      <Filter>View\ykyc</Filter>
+    </QtMoc>
+    <QtMoc Include="MTF.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\assistdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\assistform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\QCommonDockWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\BottomWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ReplayListFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\WordEngine.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\HealthyForm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\StaticCheckWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\Dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="View\ccheckcombox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="View\MainWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\QtDockTitleBar.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="QQuickView.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\QDisplayDockWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\QCToolBar.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\themewidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\ykyc\CDlgComm.ui">
+      <Filter>View\ykyc</Filter>
+    </QtUic>
+    <QtUic Include="View\QSaveDataConfigDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\ykyc\BroadcastSetWidget.ui">
+      <Filter>View\ykyc</Filter>
+    </QtUic>
+    <QtUic Include="View\ykyc\SerialPortShowWidget.ui">
+      <Filter>View\ykyc</Filter>
+    </QtUic>
+    <QtUic Include="MTF.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\assistdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\assistform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\QCommonDockWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\HealthyForm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\StaticCheckWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="View\Dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="QQuickView.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="Resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View\PixItem.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View\QDisplayDataModel.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Callout.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View\ykyc\json.hpp">
+      <Filter>View\ykyc</Filter>
+    </ClInclude>
+    <ClInclude Include="View\ykyc\broadcast\DataBlockBroadcast.h">
+      <Filter>View\ykyc</Filter>
+    </ClInclude>
+    <ClInclude Include="View\ykyc\broadcast\DataInit.h">
+      <Filter>View\ykyc</Filter>
+    </ClInclude>
+    <ClInclude Include="View\QBackRuleGraphicsItem.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View\QImageCallout.h">
+      <Filter>View\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\driver\C1500Driver.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\factory\C1500Factory.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\driver\CDALSADriver.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\factory\CDALSAFactory.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\interface\CDataTransmission.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\driver\CDriver.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\interface\CDriverData.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\interface\CDriverDefine.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\interface\CDriverOperator.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\factory\CFactory.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\common\CIniReader.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\common\CIniWriter.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\common\cJSON.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="View\AssistPicDataModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View\PayloadParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QQuickView.rc" />
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="camera_icon.ico" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/QQuickView">
+        <file>View/qss/default.qss</file>
+    </qresource>
+</RCC>

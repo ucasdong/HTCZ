@@ -1,0 +1,11 @@
+{
+    "id": "测温",
+    "list_table": {
+        "col_count": 10,
+        "row_count": 20
+    },
+    "serial_port": {
+        "port_name": "COM4",
+        "baudrate": 115200
+    }
+}

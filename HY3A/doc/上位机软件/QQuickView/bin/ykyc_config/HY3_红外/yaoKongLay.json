@@ -1,0 +1,430 @@
+{
+  "WINDOW_LAY": [
+    3,
+    8
+  ],
+  "WINDOW_COMBOXPARAMS": {
+    "短波": 15,
+    "长波": 240,
+    "盲元检测模式": 15,
+    "正常模式": 240,
+    "数字TDI开": 1,
+    "数字TDI关": 2,
+    "非均匀性校正开": 1,
+    "非均匀性校正关": 2,
+    "本地减校模式开": 1,
+    "本地减校模式关": 2,
+    "盲元替换开": 1,
+    "盲元替换关": 2,
+    "内部扫描": 15,
+    "外部扫描": 240,
+    "准备开始参数上注": 240,
+    "结束参数上注": 15,
+    "定时刷新开": 1,
+    "闭环监测刷新开": 2,
+    "手动刷新开": 3,
+    "刷新关": 4,
+    "非定时刷新": 0,
+    "1分钟": 1,
+    "3分钟": 2,
+    "5分钟": 3,
+    "10分钟": 4,
+    "加载开": 15,
+    "加载关": 0,
+    "固化PROM": 0,
+    "上注程序": 1,
+    "加载W2指定程序": 1,
+    "程序擦除": 3,
+    "程序回读": 7,
+    "ON": 1,
+    "OFF": 0,
+    "不变": 0,
+    "+1": 1,
+    "-1": 2,
+    "校验和故障模式": 3,
+    "总线A复位": 90,
+    "总线B复位": 91,
+    "替换": 1,
+    "取消替换": 0,
+    "B14": 1,
+    "B15": 2,
+    "B17": 4,
+    "B18": 5
+  },
+  "groups": [
+    {
+      "Param_GroupName": "行周期设置:0",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W2:行周期_24,8"
+        ],
+        [
+          "Param_LineEdit",
+          "W3:行周期_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:21"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "增益设置:0",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W2:谱段_24,8"
+        ],
+        [
+          "Param_LineEdit",
+          "W3:级数_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:22"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "工作模式:0",
+      "vecTypeToName": [
+        [
+          "Param_Label",
+          "W2:00H"
+        ],
+        [
+          "Param_Combox",
+          "W3模式:正常模式,盲元检测模式_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:23"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "B14积分时间设置:0",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W2:积分时间_24,8"
+        ],
+        [
+          "Param_LineEdit",
+          "W3:积分时间_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:24"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "B15积分时间设置:0",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W2:积分时间_24,8"
+        ],
+        [
+          "Param_LineEdit",
+          "W3:积分时间_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:25"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "B16积分时间设置:0",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W2:积分时间_24,8"
+        ],
+        [
+          "Param_LineEdit",
+          "W3:积分时间_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:26"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "B17积分时间设置:0",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W2:积分时间_24,8"
+        ],
+        [
+          "Param_LineEdit",
+          "W3:积分时间_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:27"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "B18积分时间设置:0",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W2:积分时间_24,8"
+        ],
+        [
+          "Param_LineEdit",
+          "W3:积分时间_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:28"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "算法开关:0",
+      "vecTypeToName": [
+        [
+          "Param_Label",
+          "W2:00H"
+        ],
+        [
+          "Param_Combox",
+          "W3-D7-D6模式:非均匀性校正开,非均匀性校正关_22,2"
+        ],
+        [
+          "Param_Combox",
+          "W3-D5-D4模式:本地减校模式开,本地减校模式关_20,2"
+        ],
+        [
+          "Param_Combox",
+          "W3-D3-D2模式:盲元替换开,盲元替换关_18,2"
+        ],
+        [
+          "Param_Combox",
+          "W3-D1-D0模式:数字TDI开,数字TDI关_16,2"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:29"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "成像触发模式:0",
+      "vecTypeToName": [
+        [
+          "Param_Label",
+          "W2:00H"
+        ],
+        [
+          "Param_Combox",
+          "W3模式:外部扫描,内部扫描_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:2A"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "盲元替换设置:0",
+      "vecTypeToName": [
+        [
+          "Param_Combox",
+          "W2-D7-D4:B14,B15,B17,B18_28,4"
+        ],
+        [
+          "Param_LineEdit",
+          "W2-D3-D0:_24,4"
+        ],
+        [
+          "Param_Combox",
+          "W3-D7:替换,取消替换_23,1"
+        ],
+        [
+          "Param_LineEdit",
+          "W3-D6-D0:_16,7"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:2B"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "刷新设置:51",
+      "vecTypeToName": [
+        [
+          "Param_Combox",
+          "W2:定时刷新开,闭环监测刷新开,手动刷新开,刷新关_24,8"
+        ],
+        [
+          "Param_Combox",
+          "W3定时刷新时间间隔:非定时刷新,1分钟,3分钟,5分钟,10分钟_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:31"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "加载程序选择:51",
+      "vecTypeToName": [
+        [
+          "Param_Combox",
+          "W2程序版本号:固化PROM,上注程序_24,8"
+        ],
+        [
+          "Param_Combox",
+          "W3:加载W2指定程序,程序擦除,程序回读_16,8"
+        ],
+        [
+          "Param_Label",
+          "W4-W5:0000H"
+        ],
+        [
+          "Param_SendButton",
+          "发送:32"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "半角角度设置:53",
+      "vecTypeToName": [
+        [
+          "Param_Combox",
+          "类型:不变,+1,-1,校验和故障模式_3,1"
+        ],
+        [
+          "Param_LineEdit",
+          "角度初始值_4,3,16"
+        ],
+        [
+          "Param_LineEdit",
+          "角度变化周期(步进为8ns)(十进制)_7,4,10"
+        ],
+        [
+          "Param_SendButton",
+          "发送:3608"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "望远角度设置:53",
+      "vecTypeToName": [
+        [
+          "Param_Combox",
+          "类型:不变,+1,-1,校验和故障模式_3,1"
+        ],
+        [
+          "Param_LineEdit",
+          "角度初始值_4,3,16"
+        ],
+        [
+          "Param_LineEdit",
+          "角度变化周期(步进为8ns)(十进制)_7,4,10"
+        ],
+        [
+          "Param_SendButton",
+          "发送:3708"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "设置卫星平台时间广播数据:53",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W0-W5:基准卫星平台时间_3,6"
+        ],
+        [
+          "Param_SendButton",
+          "发送:1106"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "设置GNSS整秒对时广播数据:53",
+      "vecTypeToName": [
+        [
+          "Param_LineEdit",
+          "W0-W5:GNSS整秒对时广播数据_3,6"
+        ],
+        [
+          "Param_SendButton",
+          "发送:1206"
+        ]
+      ]
+    },
+    {
+      "Param_GroupName": "内部CAN总线复位广播:54",
+      "vecTypeToName": [
+        [
+          "Param_Combox",
+          "W3模式:总线A复位,总线B复位_4,1"
+        ],
+        [
+          "Param_SendButton",
+          "发送:40"
+        ]
+      ]
+    }
+  ]
+}

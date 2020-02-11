@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin</OutDir>
+    <IncludePath>.\View;.\View\include;.\Include;C:\Program Files\Teledyne DALSA\Sapera\Classes\Basic;C:\Program Files\Teledyne DALSA\Sapera\Include;.\Driver\driverdata\interface;.\Driver\driverdata\factory;.\Driver\driverdata\driver;C:\Program Files\Teledyne DALSA\Sapera\Classes\Gui;$(IncludePath)</IncludePath>
+    <LibraryPath>.\View\lib;C:\Program Files\Teledyne DALSA\Sapera\Lib\Win64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin</OutDir>
+    <IncludePath>.\View;.\View\include;.\Include;C:\Program Files\Teledyne DALSA\Sapera\Classes\Basic;C:\Program Files\Teledyne DALSA\Sapera\Include;.\Driver\driverdata\interface;.\Driver\driverdata\factory;.\Driver\driverdata\driver;C:\Program Files\Teledyne DALSA\Sapera\Classes\Gui;$(IncludePath)</IncludePath>
+    <LibraryPath>.\View\lib;C:\Program Files\Teledyne DALSA\Sapera\Lib\Win64;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Qt\Qt5.11.2\5.11.2\Src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CHARTS_LIB;QT_SERIALPORT_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;.\View\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;QsLogd2.lib;SapClassBasic.lib;corapi.lib;shell32.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Chartsd.lib;Qt5SerialPortd.lib;Qt5Networkd.lib;Qt5AxContainerd.lib;Qt5AxBased.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);ws2_32.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalOptions>/ENTRY:"mainCRTStartup" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CHARTS_LIB;QT_SERIALPORT_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>$(QTDIR)</QTDIR>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CHARTS_LIB;QT_SERIALPORT_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;QsLog2.lib;SapClassBasic.lib;corapi.lib;shell32.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Charts.lib;Qt5SerialPort.lib;Qt5Network.lib;Qt5AxContainer.lib;Qt5AxBase.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ENTRY:"mainCRTStartup" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CHARTS_LIB;QT_SERIALPORT_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR>$(QTDIR)</QTDIR>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Driver\common\CIniReader.cpp" />
+    <ClCompile Include="Driver\common\CIniWriter.cpp" />
+    <ClCompile Include="Driver\common\cJSON.cpp" />
+    <ClCompile Include="Driver\driver\C1500Driver.cpp" />
+    <ClCompile Include="Driver\driver\CDALSADriver.cpp" />
+    <ClCompile Include="Driver\factory\C1500Factory.cpp" />
+    <ClCompile Include="Driver\factory\CDALSAFactory.cpp" />
+    <ClCompile Include="Driver\interface\CDataTransmission.cpp" />
+    <ClCompile Include="Driver\interface\CDriverData.cpp" />
+    <ClCompile Include="Driver\interface\CDriverOperator.cpp" />
+    <ClCompile Include="IBussiness.cpp" />
+    <ClCompile Include="Include\CommonHeader.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Model\AnalysisModel.cpp" />
+    <ClCompile Include="Model\DataAnalysisModel.cpp" />
+    <ClCompile Include="Model\GrabImageData.cpp" />
+    <ClCompile Include="Model\SaveData.cpp" />
+    <ClCompile Include="MTF.cpp" />
+    <ClCompile Include="QBaseDispalyStrategy.cpp" />
+    <ClCompile Include="QQuickView.cpp" />
+    <ClCompile Include="View\assistdialog.cpp" />
+    <ClCompile Include="View\assistform.cpp" />
+    <ClCompile Include="View\AssistPicDataModel.cpp" />
+    <ClCompile Include="View\BottomWidget.cpp" />
+    <ClCompile Include="View\Callout.cpp" />
+    <ClCompile Include="View\ccheckcombox.cpp" />
+    <ClCompile Include="View\Dialog.cpp" />
+    <ClCompile Include="View\HealthyForm.cpp" />
+    <ClCompile Include="View\MainWindow.cpp" />
+    <ClCompile Include="View\PayloadParser.cpp" />
+    <ClCompile Include="View\PixItem.cpp" />
+    <ClCompile Include="View\QBackRuleGraphicsItem.cpp" />
+    <ClCompile Include="View\QCommonDockWidget.cpp" />
+    <ClCompile Include="View\QCToolBar.cpp" />
+    <ClCompile Include="View\QDisplayDataModel.cpp" />
+    <ClCompile Include="View\QDisplayDockWidget.cpp" />
+    <ClCompile Include="View\QImageCallout.cpp" />
+    <ClCompile Include="View\QImageView.cpp" />
+    <ClCompile Include="View\QImageViewWorker.cpp" />
+    <ClCompile Include="View\QSaveDataConfigDialog.cpp" />
+    <ClCompile Include="View\QtDockTitleBar.cpp" />
+    <ClCompile Include="View\ReplayListFrame.cpp" />
+    <ClCompile Include="View\rulebar.cpp" />
+    <ClCompile Include="View\StaticCheckWidget.cpp" />
+    <ClCompile Include="View\themewidget.cpp" />
+    <ClCompile Include="View\WordEngine.cpp" />
+    <ClCompile Include="View\ykyc\BroadcastSetWidget.cpp" />
+    <ClCompile Include="View\ykyc\broadcast\DataBlockBroadcast.cpp" />
+    <ClCompile Include="View\ykyc\CDlgComm.cpp" />
+    <ClCompile Include="View\ykyc\Common.cpp" />
+    <ClCompile Include="View\ykyc\ConfigIni.cpp" />
+    <ClCompile Include="View\ykyc\SerialPortClass.cpp" />
+    <ClCompile Include="View\ykyc\SerialPortShowWidget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QQuickView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="MTF.ui" />
+    <QtUic Include="QQuickView.ui" />
+    <QtUic Include="View\assistdialog.ui" />
+    <QtUic Include="View\assistform.ui" />
+    <QtUic Include="View\Dialog.ui" />
+    <QtUic Include="View\HealthyForm.ui" />
+    <QtUic Include="View\MainWindow.ui" />
+    <QtUic Include="View\QCommonDockWidget.ui" />
+    <QtUic Include="View\QCToolBar.ui" />
+    <QtUic Include="View\QDisplayDockWidget.ui" />
+    <QtUic Include="View\QSaveDataConfigDialog.ui" />
+    <QtUic Include="View\QtDockTitleBar.ui" />
+    <QtUic Include="View\StaticCheckWidget.ui" />
+    <QtUic Include="View\themewidget.ui" />
+    <QtUic Include="View\ykyc\BroadcastSetWidget.ui" />
+    <QtUic Include="View\ykyc\CDlgComm.ui">
+      <SubType>Designer</SubType>
+    </QtUic>
+    <QtUic Include="View\ykyc\SerialPortShowWidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="QQuickView.qrc">
+      <SubType>Designer</SubType>
+    </QtRcc>
+    <QtRcc Include="Resource.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Driver\common\CIniReader.h" />
+    <ClInclude Include="Driver\common\CIniWriter.h" />
+    <ClInclude Include="Driver\common\cJSON.h" />
+    <ClInclude Include="Driver\driver\C1500Driver.h" />
+    <ClInclude Include="Driver\driver\CDALSADriver.h" />
+    <ClInclude Include="Driver\driver\CDriver.h" />
+    <ClInclude Include="Driver\factory\C1500Factory.h" />
+    <ClInclude Include="Driver\factory\CDALSAFactory.h" />
+    <ClInclude Include="Driver\factory\CFactory.h" />
+    <ClInclude Include="Driver\interface\CDataTransmission.h" />
+    <ClInclude Include="Driver\interface\CDriverData.h" />
+    <ClInclude Include="Driver\interface\CDriverDefine.h" />
+    <ClInclude Include="Driver\interface\CDriverOperator.h" />
+    <QtMoc Include="MTF.h" />
+    <QtMoc Include="View\assistdialog.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <QtMoc Include="View\assistform.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <ClInclude Include="View\AssistPicDataModel.h" />
+    <QtMoc Include="View\BottomWidget.h">
+    </QtMoc>
+    <QtMoc Include="View\HealthyForm.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <QtMoc Include="View\Dialog.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <QtMoc Include="View\ccheckcombox.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <ClInclude Include="View\PayloadParser.h" />
+    <ClInclude Include="View\QBackRuleGraphicsItem.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;.\View\include;.\View;$(QTDIR)\include\QtSerialPort</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;.\View\include;.\View;$(QTDIR)\include\QtSerialPort</IncludePath>
+    </ClInclude>
+    <QtMoc Include="View\ykyc\SerialPortShowWidget.h" />
+    <QtMoc Include="View\rulebar.h" />
+    <QtMoc Include="View\QCommonDockWidget.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <ClInclude Include="View\QImageCallout.h" />
+    <QtMoc Include="View\QSaveDataConfigDialog.h" />
+    <QtMoc Include="View\ykyc\BroadcastSetWidget.h" />
+    <QtMoc Include="View\ReplayListFrame.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <QtMoc Include="View\WordEngine.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <QtMoc Include="View\StaticCheckWidget.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);.\View\include;.\View;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\ActiveQt;C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+    </QtMoc>
+    <ClInclude Include="View\ykyc\broadcast\DataBlockBroadcast.h" />
+    <ClInclude Include="View\ykyc\broadcast\DataInit.h" />
+    <ClInclude Include="View\ykyc\json.hpp" />
+    <QtMoc Include="View\ykyc\SerialPortClass.h" />
+    <QtMoc Include="View\ykyc\ConfigIni.h" />
+    <QtMoc Include="View\ykyc\Common.h" />
+    <QtMoc Include="View\ykyc\CDlgComm.h" />
+    <QtMoc Include="View\themewidget.h" />
+    <QtMoc Include="View\QImageViewWorker.h" />
+    <QtMoc Include="Model\AnalysisModel.h" />
+    <QtMoc Include="Model\DataAnalysisModel.h" />
+    <QtMoc Include="Include\CommonHeader.h" />
+    <QtMoc Include="Model\GrabImageData.h" />
+    <QtMoc Include="Model\SaveData.h" />
+    <ClInclude Include="View\Callout.h" />
+    <ClInclude Include="View\PixItem.h" />
+    <ClInclude Include="View\QDisplayDataModel.h" />
+    <QtMoc Include="View\QImageView.h" />
+    <QtMoc Include="IBussiness.h" />
+    <QtMoc Include="QBaseDispalyStrategy.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <QtMoc Include="View\QCToolBar.h" />
+    <QtMoc Include="View\QDisplayDockWidget.h" />
+    <QtMoc Include="View\QtDockTitleBar.h" />
+    <QtMoc Include="View\MainWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+    <ResourceCompile Include="QQuickView.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="camera_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="$(DefaultQtVersion)" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

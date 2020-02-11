@@ -1,0 +1,100 @@
+{
+    "WINDOW_CAMERATYPE": {
+        "待机模式": "1",
+        "窗口模式": "2",
+        "全图模式": "3",
+        "上注模式": "255"
+    },
+    "WINDOW_LAY": [
+        1,
+        6
+    ],
+    "WINDOW_PERIODS": {
+        "原始图像": "1",
+        "处理图像": "2"
+    },
+    "groups": [
+        {
+            "Param_GroupName": "任意指令:0",
+            "vecTypeToName": [
+                [
+                    "Param_LineEdit",
+                    "任意指令_8,32"
+                ],
+                [
+                    "Param_SendButton",
+                    "发送:255"
+                ]
+            ]
+        },
+        {
+            "Param_GroupName": "星相机工作模式:0",
+            "vecTypeToName": [
+                [
+                    "Param_Combox",
+                    "模式选择:待机模式,窗口模式,全图模式,上注模式_32,8"
+                ],
+                [
+                    "Param_SendButton",
+                    "发送:1"
+                ]
+            ]
+        },
+        {
+            "Param_GroupName": "增益设置:0",
+            "vecTypeToName": [
+                [
+                    "Param_LineEdit",
+                    "模拟增益_32,8"
+                ],
+                [
+                    "Param_LineEdit",
+                    "数字增益_24,8"
+                ],
+                [
+                    "Param_SendButton",
+                    "发送:65"
+                ]
+            ]
+        },
+        {
+            "Param_GroupName": "曝光时间设置:0",
+            "vecTypeToName": [
+                [
+                    "Param_LineEdit",
+                    "曝光时间（单位0.1ms）_24,16"
+                ],
+                [
+                    "Param_SendButton",
+                    "发送:66"
+                ]
+            ]
+        },
+        {
+            "Param_GroupName": "照星曝光中间时刻偏移量设置:0",
+            "vecTypeToName": [
+                [
+                    "Param_LineEdit",
+                    "偏移量（单位:10ns）_8,32"
+                ],
+                [
+                    "Param_SendButton",
+                    "发送:67"
+                ]
+            ]
+        },
+        {
+            "Param_GroupName": "数据方式:0",
+            "vecTypeToName": [
+                [
+                    "Param_Combox",
+                    "方式选择:原始图像,处理图像_32,8"
+                ],
+                [
+                    "Param_SendButton",
+                    "发送:68"
+                ]
+            ]
+        }
+    ]
+}

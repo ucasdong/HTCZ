@@ -1,0 +1,171 @@
+[
+    {
+        "id": "设置GNSS定位广播数据",
+        "cmd_length": 16,
+        "cmd_count": 7,
+        "LT_header":"2EA0",
+        "table": [
+            {
+                "type": "fixed_hide",
+                "length": 3,
+                "value": "130012"
+            },
+            {
+                "type": "index_hide",
+                "length": 1
+            },
+            {
+                "type": "fixed_hide",
+                "length": 1,
+                "value":"08"
+            },
+            {
+                "type": "fixed",
+                "id": "识别码",
+                "length": 2,
+                "value":"BF68"
+            },
+            {
+                "type": "index",
+                "length": 1
+            },
+            {
+                "type": "data",
+                "id": "卫星辅助数据",
+                "length": 7
+            },
+            {
+                "type": "fixed_hide",
+                "length": 1,
+                "value": "00"
+            }
+        ]
+    },
+    {
+        "id": "设置姿控星敏广播数据",
+        "cmd_length": 16,
+        "cmd_count": 36,
+        "LT_header":"F9A0",
+        "table": [
+            {
+                "type": "fixed_hide",
+                "length": 3,
+                "value": "140012"
+            },
+            {
+                "type": "index_hide",
+                "length": 1
+            },
+            {
+                "type": "fixed_hide",
+                "length": 1,
+                "value":"08"
+            },
+            {
+                "type": "fixed",
+                "id": "识别码",
+                "length": 2,
+                "value":"BF68"
+            },
+            {
+                "type": "index",
+                "length": 1
+            },
+            {
+                "type": "data",
+                "id": "姿控星敏广播",
+                "length": 7
+            },
+            {
+                "type": "fixed_hide",
+                "length": 1,
+                "value": "00"
+            }
+        ]
+    },
+    {
+        "id": "设置姿控陀螺姿控星敏广播数据",
+        "cmd_length": 16,
+        "cmd_count": 33,
+        "LT_header":"E4A0",
+        "table": [
+            {
+                "type": "fixed_hide",
+                "length": 3,
+                "value": "150012"
+            },
+            {
+                "type": "index_hide",
+                "length": 1
+            },
+            {
+                "type": "fixed_hide",
+                "length": 1,
+                "value":"08"
+            },
+            {
+                "type": "fixed",
+                "id": "识别码",
+                "length": 2,
+                "value":"BF68"
+            },
+            {
+                "type": "index",
+                "length": 1
+            },
+            {
+                "type": "data",
+                "id": "姿控陀螺姿控星敏",
+                "length": 7
+            },
+            {
+                "type": "fixed_hide",
+                "length": 1,
+                "value": "00"
+            }
+        ]
+    },
+    {
+        "id": "设置相机辅助数据广播数据",
+        "cmd_length": 16,
+        "cmd_count": 22,
+        "LT_header":"AC60",
+        "table": [
+            {
+                "type": "fixed_hide",
+                "length": 3,
+                "value": "160012"
+            },
+            {
+                "type": "index_hide",
+                "length": 1
+            },
+            {
+                "type": "fixed_hide",
+                "id": "帧信息",
+                "length": 1,
+                "value":"08"
+            },
+            {
+                "type": "fixed",
+                "id": "识别码",
+                "length": 2,
+                "value":"BF68"
+            },
+            {
+                "type": "index",
+                "length": 1
+            },
+            {
+                "type": "data",
+                "id": "相机辅助数据",
+                "length": 7
+            },
+            {
+                "type": "fixed_hide",
+                "length": 1,
+                "value": "00"
+            }
+        ]
+    }
+]

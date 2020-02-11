@@ -1,0 +1,235 @@
+[
+    [
+        "param_Name",
+        "param_Type",
+        "param_BelongGroup",
+        "param_StartBit",
+        "param_AnalysisBits"
+    ],
+    [
+        {
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "表头",
+            "param_Name": "分隔符",
+            "param_StartBit": 0,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "载荷标识",
+            "param_StartBit": 8,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "通道标识",
+            "param_StartBit": 10,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "普段标识",
+            "param_StartBit": 12,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "预留标识",
+            "param_StartBit": 14,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "数据类型",
+            "param_StartBit": 16,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 8,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "数据组编号",
+            "param_StartBit": 18,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 4,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "行计数",
+            "param_StartBit": 26,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "曝光开始时间",
+            "param_StartBit": 30,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 4,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "曝光时间",
+            "param_StartBit": 46,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 4,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "增益",
+            "param_StartBit": 50,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 2,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "差分模式",
+            "param_StartBit": 54,
+            "param_Type": 1
+        },
+        {
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "其他辅助数据0-7",
+            "param_StartBit": 56,
+            "param_Type": 1
+        },
+		 {
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "星相机辅助",
+            "param_Name": "其他辅助数据8-15",
+            "param_StartBit": 72,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据0-7",
+            "param_StartBit": 88,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据8-15",
+            "param_StartBit": 104,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据16-23",
+            "param_StartBit": 120,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据24-31",
+            "param_StartBit": 136,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据32-39",
+            "param_StartBit": 152,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据40-47",
+            "param_StartBit": 168,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据48-55",
+            "param_StartBit": 184,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据56-63",
+            "param_StartBit": 200,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据64-71",
+            "param_StartBit": 216,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据72-79",
+            "param_StartBit": 232,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据80-87",
+            "param_StartBit": 248,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据88-95",
+            "param_StartBit": 264,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据96-103",
+            "param_StartBit": 280,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据104-111",
+            "param_StartBit": 296,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据112-119",
+            "param_StartBit": 312,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据120-127",
+            "param_StartBit": 328,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据128-135",
+            "param_StartBit": 344,
+            "param_Type": 1
+        },
+		{
+            "param_AnalysisBits": 16,
+            "param_BelongGroup": "宽幅波前辅助",
+            "param_Name": "卫星辅助数据136-143",
+            "param_StartBit": 360,
+            "param_Type": 1
+        }
+    ]
+]

@@ -1,0 +1,318 @@
+{
+   "ProjectName" : "高轨海洋",
+   "DeviceType" : "Dalsa",
+   "DeviceIndex" : "0",
+   "CameraType" : "0",
+   "YkycPath":"ykyc_config/HY3_可见",
+   "Driver":{
+		"Type" : "DALSA",
+		"CCFPath": "HY3.ccf",
+		"OrigWidth" : 2304,
+		"OrigHeight" : 3534,
+		"ImgWidth" : 2296,
+		"ImgHeight" : 3527,
+		"PixelBytes" : 2,
+		"BufferCount" : 2,
+		"BufferCacheNum" : 5,
+		"PackageHeadLen" : 0,
+		"PackageTotalLen" : 8142336
+	},
+   "Model" : [
+        {
+			"Camera_ID": "HY3",
+			"Camera_Analysis_ID": "FA",
+			"Camera_ID_Index": 0,
+			"Camera_ID_IndexLength": 1,
+			"Camera_Name": "海洋3可见视频处理器",
+			"Camera_AnalysisType": 1,
+			"Camera_Model":[
+				{
+					"Model_Name":"海洋3标准模式",
+				    "Model_length":1148
+				}
+			],
+			"Camera_RecvNothingTime": 2,
+            "One_Frame_LineCount": 3527,
+			"One_Frame_LineLength": 1148,
+			"One_Frame_IncludeGraphicLines": 1,
+			"One_Line_FZ_Length": 1148,
+			"One_FZ_Lines": 7,
+			"One_Line_GraphicLength": 1148,
+			"One_Pixel_Length": 2,
+			"Data_EndianFlag":0,
+			"Data_SkipBits":0,		
+			"Sensor_Lay": [2,1,2],
+			"Sensor_ID_Index": 3,
+			"Sensor_ID_IndexLength": 1,
+			"Sensor_Count": 5,
+			"Sensor_NumDiff": 0,
+			"Sensor_NamesAndSizes": 
+			[
+				{
+					"Sensor_ID": "HY3_MFSTX",
+					"Sensor_Analysis_ID": "2AA8",
+					"Sensor_StartByte": 8036,
+					"Sensor_Name": "漫反射图像",
+					"Sensor_Width": 1148,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "MFSTX_B1",
+							"Spectral_Name": "B1",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B2",
+							"Spectral_Name": "B2",
+							"Spectral_StartByte": 116,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B3",
+							"Spectral_Name": "B3",
+							"Spectral_StartByte": 202,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B4-B12",
+							"Spectral_Name": "B4-B12",
+							"Spectral_StartByte": 288,							
+							"Spectral_Width": 774,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "MFSTX_B13",
+							"Spectral_Name": "B13",
+							"Spectral_StartByte": 1062,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_GWHTTX",
+					"Sensor_Analysis_ID": "2EEC",
+					"Sensor_StartByte": 65436,
+					"Sensor_Name": "高温黑体图像",
+					"Sensor_Width": 1148,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "GWHTTX_B1",
+							"Spectral_Name": "B1",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B2",
+							"Spectral_Name": "B2",
+							"Spectral_StartByte": 116,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B3",
+							"Spectral_Name": "B3",
+							"Spectral_StartByte": 202,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B4-B12",
+							"Spectral_Name": "B4-B12",
+							"Spectral_StartByte": 288,							
+							"Spectral_Width": 774,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "GWHTTX_B13",
+							"Spectral_Name": "B13",
+							"Spectral_StartByte": 1062,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_DWTX",
+					"Sensor_Analysis_ID": "3330",
+					"Sensor_StartByte": 122836,
+					"Sensor_Name": "地物图像",
+					"Sensor_Width": 1148,
+					"Sensor_Height": 3320,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "DWTX_B1",
+							"Spectral_Name": "B1",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B2",
+							"Spectral_Name": "B2",
+							"Spectral_StartByte": 116,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B3",
+							"Spectral_Name": "B3",
+							"Spectral_StartByte": 202,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B4-B12",
+							"Spectral_Name": "B4-B12",
+							"Spectral_StartByte": 288,							
+							"Spectral_Width": 774,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWTX_B13",
+							"Spectral_Name": "B13",
+							"Spectral_StartByte": 1062,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_LKJTX",
+					"Sensor_Analysis_ID": "3774",
+					"Sensor_StartByte": 3934196,
+					"Sensor_Name": "冷空间图像",
+					"Sensor_Width": 1148,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "LKJTX_B1",
+							"Spectral_Name": "B1",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B2",
+							"Spectral_Name": "B2",
+							"Spectral_StartByte": 116,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B3",
+							"Spectral_Name": "B3",
+							"Spectral_StartByte": 202,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B4-B12",
+							"Spectral_Name": "B4-B12",
+							"Spectral_StartByte": 288,							
+							"Spectral_Width": 774,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "LKJTX_B13",
+							"Spectral_Name": "B13",
+							"Spectral_StartByte": 1062,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						}
+					]
+				},
+				{
+					"Sensor_ID": "HY3_DWHTTX",
+					"Sensor_Analysis_ID": "3BB8",
+					"Sensor_StartByte": 3991596,
+					"Sensor_Name": "低温黑体图像",
+					"Sensor_Width": 1148,
+					"Sensor_Height": 50,
+					"Sensor_FZ_Width": 30,
+					"Sensor_FZ_Height": 50,
+					"Sensor_SpectralList":
+					[
+						{
+							"Spectral_ID": "DWHTTX_B1",
+							"Spectral_Name": "B1",
+							"Spectral_StartByte": 30,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B2",
+							"Spectral_Name": "B2",
+							"Spectral_StartByte": 116,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B3",
+							"Spectral_Name": "B3",
+							"Spectral_StartByte": 202,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B4-B12",
+							"Spectral_Name": "B4-B12",
+							"Spectral_StartByte": 288,							
+							"Spectral_Width": 774,
+							"Spectral_Height": 50
+						},
+						{
+							"Spectral_ID": "DWHTTX_B13",
+							"Spectral_Name": "B13",
+							"Spectral_StartByte": 1062,							
+							"Spectral_Width": 86,
+							"Spectral_Height": 50
+						}
+					]
+				}
+			]					
+		}      
+   ],
+   "View" : {
+		"AppTitle" : "可见视频处理器图像采集软件",
+		"SubWindows" : [
+			{
+				"ID" : "Display-Camera",
+				"Type" :"DisplayData",
+				"Title":"探测器1",
+				"DataSourceType":"Camera",
+				"DataSourceID":"HY3",
+				"Width":1148,
+				"Height":3527
+			},
+			{
+				"ID" : "Log",
+				"Type" :"Log",
+				"Title":"日志"
+			},
+			{
+				"ID" : "Assist",
+				"Type" :"AssistTable",
+				"Title":"辅助数据"
+			}
+		]
+	}
+}

@@ -1,0 +1,414 @@
+[
+	{
+		"id":"RecvTDITime",
+        "length": 32,
+        "name": "接收积分时间",
+        "start_bit": 2367168,
+        "type": 1
+    },
+    {
+		"id":"B1Gain",
+        "length": 16,
+        "name": "B1谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B2Gain",
+        "length": 16,
+        "name": "B2谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B3Gain",
+        "length": 16,
+        "name": "B3谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B4Gain",
+        "length": 16,
+        "name": "B4谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B5Gain",
+        "length": 16,
+        "name": "B5谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B6Gain",
+        "length": 16,
+        "name": "B6谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B7Gain",
+        "length": 16,
+        "name": "B7谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B8Gain",
+        "length": 16,
+        "name": "B8谱段增益",
+        "type": 1
+    },
+    {
+		"id":"B9Gain",
+        "length": 16,
+        "name": "B9谱段级数",
+        "type": 1
+    },
+    {
+		"id":"BaiJingCount",
+        "length": 16,
+        "name": "摆镜调整总计次",
+        "type": 1
+    },
+    {
+		"id":"BaiJingYaoce",
+        "length": 48,
+        "name": "摆镜遥测值",
+        "type": 1
+    },
+    {
+		"id":"BaiJingDianji",
+        "length": 32,
+        "name": "当前摆镜电机转动步数",
+        "type": 1
+    },
+    {
+		"id":"JiaoMianCount",
+        "length": 16,
+        "name": "焦面调整总计次",
+        "type": 1
+    },
+    {
+		"id":"PTDITime",
+        "length": 32,
+        "name": "P积分时间",
+        "type": 1
+    },
+    {
+		"id":"APicTime",
+        "length": 64,
+        "name": "A路成像时刻整秒部",
+        "type": 1
+    },
+    {
+		"id":"AMaiChongCount",
+        "length": 64,
+        "name": "A路秒脉冲计数",
+        "type": 1
+    },
+	{
+		"id":"B1ZuoAn",
+        "length": 32,
+        "name": "B1左暗",
+        "start_bit": 2564416,
+        "type": 1
+    },
+    {
+		"id":"B2ZuoAn",
+        "length": 32,
+        "name": "B2左暗",
+        "type": 1
+    },
+    {
+		"id":"B3ZuoAn",
+        "length": 32,
+        "name": "B3左暗",
+        "type": 1
+    },
+    {
+		"id":"B4ZuoAn",
+        "length": 32,
+        "name": "B4左暗",
+        "type": 1
+    },
+    {
+		"id":"B5ZuoAn",
+        "length": 32,
+        "name": "B5左暗",
+        "type": 1
+    },
+    {
+		"id":"B6ZuoAn",
+        "length": 32,
+        "name": "B6左暗",
+        "type": 1
+    },
+    {
+		"id":"B7ZuoAn",
+        "length": 32,
+        "name": "B7左暗",
+        "type": 1
+    },
+    {
+		"id":"B8ZuoAn",
+        "length": 32,
+        "name": "B8左暗",
+        "type": 1
+    },
+    {
+		"id":"B9ZuoAn",
+        "length": 32,
+        "name": "B9左暗",
+        "type": 1
+    },
+    {
+		"id":"BTDITime",
+        "length": 32,
+        "name": "B积分时间",
+        "type": 1
+    },
+	    {
+		"id":"BPicTime",
+        "length": 64,
+        "name": "B路成像时刻整秒部",
+        "type": 1
+    },
+    {
+		"id":"BMaiChongCount",
+        "length": 64,
+        "name": "B路秒脉冲计数",
+        "type": 1
+    },
+	{
+		"id":"B1YouAN",
+        "length": 32,
+        "name": "B1右暗",
+        "start_bit": 2761664,
+        "type": 1
+    },
+    {
+		"id":"B2YouAN",
+        "length": 32,
+        "name": "B2右暗",
+        "type": 1
+    },
+    {
+		"id":"B3YouAN",
+        "length": 32,
+        "name": "B3右暗",
+        "type": 1
+    },
+    {
+		"id":"B4YouAN",
+        "length": 32,
+        "name": "B4右暗",
+        "type": 1
+    },
+    {
+		"id":"B5YouAN",
+        "length": 32,
+        "name": "B5右暗",
+        "type": 1
+    },
+    {
+		"id":"B6YouAN",
+        "length": 32,
+        "name": "B6右暗",
+        "type": 1
+    },
+    {
+		"id":"B7YouAN",
+        "length": 32,
+        "name": "B7右暗",
+        "type": 1
+    },
+    {
+		"id":"B8YouAN",
+        "length": 32,
+        "name": "B8右暗",
+        "type": 1
+    },
+    {
+		"id":"B9YouAN",
+        "length": 32,
+        "name": "B9右暗",
+        "type": 1
+    },
+	{
+		"id":"AlgorithmSwitch",
+        "length": 16,
+        "name": "算法开关",
+        "type": 1
+    },
+	{
+		"id":"B1TDI",
+        "length": 16,
+        "name": "B1级数",
+        "type": 1
+    },
+    {
+		"id":"B2TDI",
+        "length": 16,
+        "name": "B2级数",
+        "type": 1
+    },
+    {
+		"id":"B3TDI",
+        "length": 16,
+        "name": "B3级数",
+        "type": 1
+    },
+    {
+		"id":"B4TDI",
+        "length": 16,
+        "name": "B4级数",
+        "type": 1
+    },
+    {
+		"id":"B5TDI",
+        "length": 16,
+        "name": "B5级数",
+        "type": 1
+    },
+    {
+		"id":"B6TDI",
+        "length": 16,
+        "name": "B6级数",
+        "type": 1
+    },
+    {
+		"id":"B7TDI",
+        "length": 16,
+        "name": "B7级数",
+        "type": 1
+    },
+    {
+		"id":"B8TDI",
+        "length": 16,
+        "name": "B8级数",
+        "type": 1
+    },
+    {
+		"id":"B9TDI",
+        "length": 16,
+        "name": "B9级数",
+        "type": 1
+    },
+	{
+		"id":"B1k",
+        "length": 16,
+        "name": "B1k系数",
+        "start_bit": 2958912,
+        "type": 1
+    },
+	{
+		"id":"B1b",
+        "length": 16,
+        "name": "B1b系数",
+        "type": 1
+    },
+	{
+		"id":"B2k",
+        "length": 16,
+        "name": "B2k系数",
+        "type": 1
+    },
+	{
+		"id":"B2b",
+        "length": 16,
+        "name": "B2b系数",
+        "type": 1
+    },
+	{
+		"id":"B3k",
+        "length": 16,
+        "name": "B3k系数",
+        "type": 1
+    },
+	{
+		"id":"B3b",
+        "length": 16,
+        "name": "B3b系数",
+        "type": 1
+    },
+	{
+		"id":"B4k",
+        "length": 16,
+        "name": "B4k系数",
+        "type": 1
+    },
+	{
+		"id":"B4b",
+        "length": 16,
+        "name": "B4b系数",
+        "type": 1
+    },
+	{
+		"id":"B5k",
+        "length": 16,
+        "name": "B5k系数",
+        "type": 1
+    },
+	{
+		"id":"B5b",
+        "length": 16,
+        "name": "B5b系数",
+        "type": 1
+    },
+	{
+		"id":"B6k",
+        "length": 16,
+        "name": "B6k系数",
+        "type": 1
+    },
+	{
+		"id":"B6b",
+        "length": 16,
+        "name": "B6b系数",
+        "type": 1
+    },
+	{
+		"id":"B7k",
+        "length": 16,
+        "name": "B7k系数",
+        "type": 1
+    },
+	{
+		"id":"B7b",
+        "length": 16,
+        "name": "B7b系数",
+        "type": 1
+    },
+	{
+		"id":"B8k",
+        "length": 16,
+        "name": "B8k系数",
+        "type": 1
+    },
+	{
+		"id":"B8b",
+        "length": 16,
+        "name": "B8b系数",
+        "type": 1
+    },
+	{
+		"id":"B9k",
+        "length": 16,
+        "name": "B9k系数",
+        "type": 1
+    },
+	{
+		"id":"B9b",
+        "length": 16,
+        "name": "B9b系数",
+        "type": 1
+    },
+	{
+		"id":"B1-8OddEven",
+        "length": 32,
+        "name": "B1-B8奇偶标志",
+        "type": 1
+    },
+	{
+		"id":"B9OddEven",
+        "length": 32,
+        "name": "B9奇偶标志",
+        "type": 1
+    }
+]

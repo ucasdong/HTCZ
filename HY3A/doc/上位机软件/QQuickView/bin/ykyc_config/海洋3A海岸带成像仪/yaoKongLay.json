@@ -1,0 +1,401 @@
+{
+	"WINDOW_LAY": [
+		3,
+		8
+	],
+	"WINDOW_COMBOXPARAMS": {
+		"短波": 15,
+		"长波": 240,
+		"盲元检测模式": 15,
+		"正常模式": 240,
+		"数字TDI关": 15,
+		"数字TDI开": 240,
+		"非均匀性校正开": 241,
+		"非均匀性校正关": 31,
+		"本地减校模式开": 242,
+		"本地减校模式关": 47,
+		"盲元替换开": 243,
+		"盲元替换关": 63,
+		"内部扫描": 15,
+		"外部扫描": 240,
+		"准备开始参数上注": 240,
+		"结束参数上注": 15,
+		"定时刷新开": 1,
+		"闭环监测刷新开": 2,
+		"手动刷新开": 3,
+		"刷新关": 4,
+		"非定时刷新": 0,
+		"1分钟": 1,
+		"3分钟": 2,
+		"5分钟": 3,
+		"10分钟": 4,
+		"加载开": 15,
+		"加载关": 0,
+		"固化PROM": 0,
+		"上注程序": 1,
+		"加载W2指定程序": 1,
+		"程序擦除": 3,
+		"程序回读": 7,
+		"ON": 1,
+		"OFF": 0,
+		"不变": 0,
+		"+1": 1,
+		"-1": 2,
+		"B1": 1,
+		"B2": 2,
+		"B3": 3,
+		"B4": 4,
+		"B5": 5,
+		"B6": 6,
+		"B7": 7,
+		"B8": 8,
+		"B9": 9,
+		"B10": 10,
+		"B11": 11,
+		"B12": 12,
+		"B13": 13,
+		"32H档位1": 50,
+		"61H档位2": 97,
+		"86H档位3": 134,
+		"A4H档位4": 164,
+		"BBH档位5": 187,
+		"主份开": 15,
+		"备份开": 240,
+		"主份备份关": 0,
+		"面阵模式开": 17,
+		"面阵模式关": 0,
+		"55H正转": 85,
+		"AAH反转": 170
+	},
+	"groups": [
+		{
+			"Param_GroupName": "积分时间设置:0",
+			"vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"W2:积分时间高字节_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3:积分时间低字节_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:01"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "增益设置:0",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2谱段:B1,B2,B3,B4,B5,B6,B7,B8,B9_24,8"
+				],
+				[
+					"Param_Combox",
+					"W3增益:32H档位1,61H档位2,86H档位3,A4H档位4,BBH档位5_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:03"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "级数设置:0",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2谱段:B1,B2,B3,B4,B5,B6,B7,B8,B9_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3:级数_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:04"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "算法开关:0",
+			"vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"W2开关_24,8"
+				],
+				[
+					"Param_Label",
+					"W3-W5:AAAAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:05"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "数字增益K系数:0",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2谱段:B1,B2,B3,B4,B5,B6,B7,B8,B9_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3:K参数_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:06"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "数字偏置B系数:0",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2谱段:B1,B2,B3,B4,B5,B6,B7,B8,B9_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3:B参数_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:07"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "数传主份备份开关:0",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2开关:主份开,备份开,主份备份关_24,8"
+				],
+				[
+					"Param_Label",
+					"W3-W5:AAAAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:08"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "面阵模式开关:0",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2开关:面阵模式开,面阵模式关_24,8"
+				],
+				[
+					"Param_Label",
+					"W3-W5:AAAAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:BC"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "面阵积分时间设置:0",
+			"vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"W2:积分时间高字节_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3:积分时间低字节_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:BD"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "增益参数宽范围设置:0",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2谱段:B1,B2,B3,B4,B5,B6,B7,B8,B9_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3:增益设置数值范围_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:03"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "半角角度设置:53",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"类型:不变,+1,-1_3,1"
+				],
+				[
+					"Param_LineEdit",
+					"角度初始值_4,3"
+				],
+				[
+					"Param_LineEdit",
+					"角度变化周期(步进为8ns)_7,4"
+				],
+				[
+					"Param_SendButton",
+					"发送:3608"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "摆镜控制指令:10",
+			"vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"W2_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:17"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "调焦控制指令:10",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"W2调焦方向:55H正转,AAH反转_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3调焦步数_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:18"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "机构控制内部测试指令:10",
+			"vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"W2_24,8"
+				],
+				[
+					"Param_LineEdit",
+					"W3_16,8"
+				],
+				[
+					"Param_Label",
+					"W4-W5:AAAAH"
+				],
+				[
+					"Param_SendButton",
+					"发送:C0"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "望远角度设置:53",
+			"vecTypeToName": [
+				[
+					"Param_Combox",
+					"类型:不变,+1,-1_3,1"
+				],
+				[
+					"Param_LineEdit",
+					"角度初始值_4,3"
+				],
+				[
+					"Param_LineEdit",
+					"角度变化周期(步进为8ns)_7,4"
+				],
+				[
+					"Param_SendButton",
+					"发送:3708"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "设置卫星平台时间广播数据:53",
+			"vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"基准卫星平台时间_3,6"
+				],
+				[
+					"Param_SendButton",
+					"发送:1106"
+				]
+			]
+		},
+		{
+			"Param_GroupName": "设置GNSS整秒对时广播数据:53",
+			"vecTypeToName": [
+				[
+					"Param_LineEdit",
+					"GNSS整秒对时广播数据_3,6"
+				],
+				[
+					"Param_SendButton",
+					"发送:1206"
+				]
+			]
+		}
+	]
+}
